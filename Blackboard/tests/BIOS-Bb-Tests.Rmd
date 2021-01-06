@@ -91,7 +91,7 @@ To start your `Pool`, navigate to `Course Tools` $\rightarrow$ `Tests, Surveys, 
 
 Blackboard is finicky when it comes to formatting. However, it's important that your questions are formatted correctly or the test can become extremely challenging for students to interpret. One option is to put all of your questions and answers into an Excel file and upload this to Blackboard. [This document explains the general process](https://www.wbu.edu/wbu-online/documents/Uploading_Tests_in_Blackboard_using_Excel.pdf), but keep in mind you will still need to go back and check that each question imported properly.
 
-Another way is to write your questions as usual in a Word document. You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. If you do copy-paste something that includes formatting, I recommend selection `Remove Formatting` when the pop-up prompt appears.
+Another way is to write your questions as usual in a Word document. You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. If you do copy-paste something that includes formatting, I recommend selecting `Remove Formatting` when the pop-up prompt appears.
 
 :::: {.blackbox data-latex=""}
 
