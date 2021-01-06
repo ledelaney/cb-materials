@@ -33,6 +33,9 @@ $endif$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LUCY'S DOCUMENT PREAMBLE AND PACKAGES
 
+\widowpenalty10000
+\clubpenalty10000
+
 \usepackage{pdflscape}
 \usepackage{xcolor}
 \definecolor{light-gray}{gray}{0.95}
@@ -82,8 +85,8 @@ $endif$
 \fancyhead[L]{}
 \fancyhead[C]{$title$}
 \fancyhead[R]{}
-\fancyfoot[L]{\textsc{UIC BioS}}
-    \fancyfoot[R]{\tiny{$version$: \today}}
+\fancyfoot[L]{\textsc{$subtitle$}}
+    \fancyfoot[R]{\tiny{$version$: \today, $author$}}
 \fancyfoot[C]{\thepage\ of \pageref{LastPage}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +95,6 @@ $endif$
 
 \tableofcontents
 \newpage
-
 
 %%%%%%%%%%%%%% DOCUMENT BODY
 $body$

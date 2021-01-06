@@ -1,6 +1,6 @@
 ---
 title: "Panopto Overview for BIOS"
-subtitle: ""
+subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
 output:

@@ -2,21 +2,78 @@
 title: "Blackboard Tests"
 subtitle: "UIC BioS"
 author: "L E Delaney"
-version: "Version 4"
+version: "Version 5"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_options: margin = 1in
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+#myoutput <- "latex"
+myoutput <- "html"
+
+popups <- function(mylink, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\href{", mylink, "}", "{[View Screenshot]}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<a href="', mylink, '"', " ",
+                'target="popup"', " ", 
+                'onclick="', 
+                "window.open('", mylink, "', 'popup','width=600,height=600'); return false;",
+                '">', " ", "[View Screenshot]", "</a>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+smallfont <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\tiny{", mytext, "}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<span style = font-size:10px>', mytext, "</span>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+# <a href="http://kanishkkunal.in" 
+#   target="popup" 
+#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#     [View Screenshot]
+# </a>
+
+#\href{}{}
+
+#`r popups(mylink = "input/package-util.png")`
+
+```
 
 # Getting Started
 
@@ -34,7 +91,7 @@ To start your `Pool`, navigate to `Course Tools` $\rightarrow$ `Tests, Surveys, 
 
 Blackboard is finicky when it comes to formatting. However, it's important that your questions are formatted correctly or the test can become extremely challenging for students to interpret. One option is to put all of your questions and answers into an Excel file and upload this to Blackboard. [This document explains the general process](https://www.wbu.edu/wbu-online/documents/Uploading_Tests_in_Blackboard_using_Excel.pdf), but keep in mind you will still need to go back and check that each question imported properly.
 
-Another way is to write your questions as usual in a Word document. You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. Inside the Blackboard text editor, there is an "eraser" button on the upper right-hand side that removes all formatting. If you do a direct copy-paste from Word or another source that is not raw text, I recommend highlighting all of your text and pressing this button. 
+Another way is to write your questions as usual in a Word document. You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. If you do copy-paste something that includes formatting, I recommend selection `Remove Formatting` when the pop-up prompt appears.
 
 :::: {.blackbox data-latex=""}
 
@@ -48,53 +105,21 @@ The Blackboard text editor helps you format your questions, but the data that Bl
 
 \vspace{3mm}
 
-There are two ways to ensure your exam questions will look the same for all your students. One is to judiciously use the `Remove Formatting` button, and keep your questions as simple as possible formatting-wise (I recommend only using bold, italics, images, and tables). The second is to select the `HTML` button on the lower right-hand side of the text editor and edit your questions directly from the source. If you are familiar with `HTML`, you'll notice that there is often an enormous amount of "junk" in here.
-
-\vspace{3mm}
-
-To illustrate what I mean, here is a sample question: 
-
-\vspace{1mm}
-
-Which of these genotypes accurately represents **all** the **purple and smooth** F2 progeny?
-
-\vspace{3mm}
-
-This is what should appear in the `HTML` box for Blackboard to render this question appropriately: 
-
-\vspace{3mm}
-
-`<p>Which of these genotypes accurately represents <strong>all</strong> the <strong>purple and smooth</strong> F2 progeny?</p>`
-
-\vspace{3mm}
-
-If I copy-paste this question from an old quiz on Blackboard into a new question, it _looks_ exactly the same in the text editor. But here is (only half of) the underlying `HTML`:
-
-\vspace{3mm}
-
-:::: {.tiny data-latex=""}
-\path{<p><span style="color: #000000; font-family: 'Open Sans', sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Which of these genotypes accurately represents </span><strong style="font-family: 'Open Sans', sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: bold; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;">all</strong>.....</span></p>}
-::::
-
-\vspace{3mm}
-
-As such, this question will ultimately look very different to students than intended! 
-
-::::
+There are two ways to ensure your exam questions will look the same for all your students. One is to judiciously `Remove Formatting`, and keep your questions as simple as possible formatting-wise (I recommend only using bold, italics, images, and tables). The second is to select the `< >` button on the lower row of the text editor and edit your questions directly from the source. If you are familiar with `HTML`, you'll notice that there is often an enormous amount of "junk" in here.
 
 # Questions
 
-To create a new question, hover over `Create Question` on the top toolbar from within the `Pool`. There are many options, and only a few will be covered in detail here -- this document will focus on the question-types that are automatically graded by Blackboard. (Some other options you may wish to use if you are creating an untimed assignment and not a test or quiz. See the section below on \textsc{Creating Assignments with Tests.}) 
+To create a new question, hover over `Create Question` on the top toolbar from within the `Pool`. There are many options, and only a few will be covered in detail here -- this document will focus on the question-types that are automatically graded by Blackboard. (Some other options you may wish to use if you are creating an untimed assignment and not a test or quiz. See the section below on `Creating Assignments with Tests.`) 
 
 For most questions: Once you have entered your question, removed unnecessary formatting and set it up with bold and/or italics as you like, put an extra space below the question itself by holding down the `Shift` key and then pressing `Enter`. (In `HTML`, you can add `<br/>` underneath your question.) Otherwise, your question will appear very close to the answers and it can be difficult to distinguish them.
 
-If your answer choices include superscript or subscript, the choice will be "pushed down" or "pushed up" relative to the answer numbering and selection button. To make it easier for students to visually tell which choice to select, add a "box" around the answer choices. Do this by selecting `Insert or Edit Table` in the bottom row of the text editor. Choose 1 row and 1 column. Navigate to the `Advanced` tab and select the option "border" within `Frame`. Put your answer choice inside the box.
+If your answer choices include superscript or subscript, the choice will be "pushed down" or "pushed up" relative to the answer numbering and selection button. To make it easier for students to visually tell which choice to select, add a "box" around the answer choices. Do this by selecting the image of a table in the middle row towards the right. Choose 1 row and 1 column. Once your box appears, navigate to the the same table image and select `Table Properties` $\rightarrow$ `Advanced`. Select `Solid` border style and black color. Once finished, you can change the size of the box.
 
 ## Multiple Choice
 
 There are a few things to keep in mind when creating multiple choice questions. For answer numbering, choose `A, B, C`. I have experimented with not using answer numbering, but the answer choices often do not appear next to the appropriate button and it can be difficult for students to tell which selection goes with which answer.
 
-If you want the answer choices to appear in random order, you must select the box for this option here.
+If you want the answer choices to appear in random order, **you must select the box for this option here**.
 
 ## Either/Or 
 
@@ -136,7 +161,7 @@ When you go to build your test, you will have the option to sort your question p
 
 # Building Tests
 
-Once you have completed the question pool, the next step is to build the test itself. In `Tests, Surveys, and Pools`, navigate to `Tests`. Select `Build Test`. Here, you can add a `Description` of the test and `Instructions` on how to complete it. (You can also add these later if you aren't yet ready.) Select `Submit`.
+Once you have completed the question pool, the next step is to build the test itself. In `Course Tools` $\rightarrow$ `Tests, Surveys, and Pools`, navigate to `Tests`. Select `Build Test`. Here, you can add a `Description` of the test and `Instructions` on how to complete it. (You can also add these later if you aren't yet ready.) Select `Submit`.
 
 ## Adding Pool Questions
 
@@ -256,4 +281,6 @@ If you wish to change correct answers, or add more than one correct answer, navi
 
 For some assignments, it may be easier to create a `Test` than to use the `Assignment` feature. For instance, if you are asking students to define a variety of terms, or to write short essay responses to a series of questions. You can use the question type `Essay` for this purpose.
 
-Follow the instructions above on how to create pools, questions, and question prompts. When you go to set your test options, do not check the options for `Timer` or `Autosubmit`. You can still set a due date or an availability window, but now the students are free to enter the `Test` as many times as they please within the availability window. They should just remember to `Save` each of their answers.
+Follow the instructions above on how to create pools, questions, and question prompts. When you go to set your test options, **do not** check the options for `Timer` or `Autosubmit`. You can still set a due date or an availability window, but now the students are free to enter the `Test` as many times as they please within the availability window. They should just remember to `Save` each of their answers.
+
+`r smallfont("Version 1: Compiled by L E Delaney for UIC Biological Sciences Department")`

@@ -1,23 +1,78 @@
 ---
 title: "Blackboard Assignments and Rubrics"
-subtitle: ""
+subtitle: "UIC BioS"
 author: "L E Delaney"
-version: "Version 1"
+version: "Version 2"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
 geometry_opts: margin = 1.2in
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+#myoutput <- "latex"
+myoutput <- "html"
+
+popups <- function(mylink, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\href{", mylink, "}", "{[View Screenshot]}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<a href="', mylink, '"', " ",
+                'target="popup"', " ", 
+                'onclick="', 
+                "window.open('", mylink, "', 'popup','width=600,height=600'); return false;",
+                '">', " ", "[View Screenshot]", "</a>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+smallfont <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\tiny{", mytext, "}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<span style = font-size:10px>', mytext, "</span>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+# <a href="http://kanishkkunal.in" 
+#   target="popup" 
+#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#     [View Screenshot]
+# </a>
+
+#\href{}{}
+
+```
 
 # Getting Started
 
@@ -27,7 +82,7 @@ Assignments are an appropriate tool for student work that is more complex than t
 
 Navigate to the area in Blackboard you wish to add your assignment. Hover over `Assessments` and select `Assignment`. Give your assignment a name. You can either type out instructions for the students, or you can attach instructions via the `Assignment Files` section. If you select a due date, submissions after this date *will be accepted*, but marked late.
 
-Under `Grading`, indicate the maximum points possible or select a rubric. (See the section on \textsc{Rubrics} for more detailed information on creating and using these tools.) 
+Under `Grading`, indicate the maximum points possible or select a rubric. (See the section on `Rubrics`} for more detailed information on creating and using these tools.) 
 
 `Submission Details` allows you to select from the following options:
 
@@ -127,5 +182,5 @@ A pop-up appears with each rubric selection and any written feedback added by th
 
 _Note: Students are not able to view feedback if the column in Grade Center is hidden._
 
-
+`r smallfont("Version 1: Compiled by L E Delaney for UIC Biological Sciences Department")`
 

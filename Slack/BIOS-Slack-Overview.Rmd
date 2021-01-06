@@ -1,6 +1,6 @@
 ---
 title: "Slack Overview for BIOS"
-subtitle: ""
+subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 2"
 output:
