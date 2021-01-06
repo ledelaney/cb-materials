@@ -1,0 +1,84 @@
+---
+title: "Slack Overview for BIOS"
+subtitle: ""
+author: "L E Delaney"
+version: "Version 2"
+output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_opts: margin = 1.1in
+---
+
+# Requirements
+
+You can download the Slack app for your computer, phone, and/or tablet. One of the nicest features is being able move across devices easily. You will also need to create an account using an email and a password.
+
+1. For your Mac computer, [download here.](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)
+2. For your iPhone, [download here.](https://slack.com/help/articles/208401947-Download-Slack-for-iOS)
+3. For your Windows computer, [download here.](https://slack.com/help/articles/209038037-Download-Slack-for-Windows)
+4. For your Android device, [download here.](https://slack.com/help/articles/207691318-Download-Slack-for-Android)
+
+# Getting Started
+
+Once you have downloaded the above apps and created a login, [click here to join our group's Slack workspace.](https://join.slack.com/t/biosteaching/shared_invite/zt-giuhnjz8-H_bJsc2nQZodwB3BVizsWQ)
+
+At the top left-hand corner of the desktop version, you'll see `BIOS Teaching` (the name of our workspace) and your own username. Click here to view your profile (click `view profile`) and make edits. You may want to change your display name or other details. You can also find `Preferences` here, which allow you to customize your `Notifications` and other settings. There is an option to turn off notifications at certain times, or to only be notified under certain conditions.
+
+# Channels
+
+On the left panel, you'll notice a `Channels` area. Channels organize conversations related to specific topics. These are the channels available to us currently (but we can always add more):
+
+1. **general.** This is for group-wide announcements and information. 
+2. **bb-assessments.** This is a place to chat about quizzes or tests on Blackboard.
+3. **bb-technical.** Blackboard technical issues and errors can be discussed here.
+4. **materials.** Helpful materials for teaching online or working with Blackboard or other online software.
+5. **panopto-help.** For issues relating to Panopto lectures or embedded Panopto quizzes.
+6. **random.** General chitter-chatter not work-related.
+
+Post your questions in the channel that most resembles their topic, or search through a channel relevant to information you need. If you don't wish to be a part of a channel, you can right-click on the channel itself and `mute` it or `leave` it entirely.
+
+# Search Bar
+
+Before you ask a question in a channel, use the search bar located on the very top of the Slack app to see if your question has already been answered. Once you search a specific term, you'll see all messages, channels, or individuals that match that search term. If you see a post that looks helpful, click on it to be transported to that space in Slack.
+
+# Replies \& Feedback 
+
+Slack can quickly get messy and difficult to navigate. To keep things organized, pay attention to a few things:
+
+1. If you wish to reply to a specific post, hover over that post and `Create Thread`. This will keep all posts and relevant replies organized together.
+2. Take advantage of non-verbal feedback (emoji responses) to react to posts or let people know you've seen them -- this will keep the channel clear for those that wish to search it for relevant information!
+3. If you want to ensure a specific person sees your post, use the `@` symbol to tag that individual in your post or reply.
+
+Once you've posted something, you may edit or delete it by hovering over the message (or clicking on it in your phone) and selecting either of those options.
+
+# File Sharing 
+
+Files can be "dropped" into Slack in two ways:
+
+1. Press the paperclip symbol on the bottom right-hand side of the messaging area and browse for the file.
+2. Drag and drop the file into the messaging area.
+
+Write a relevant description of what the file is so that people may search for it. Files can generally be previewed in Slack, but they can also be downloaded by hovering over the file and selecting `Download` in the upper right-hand corner.
+
+Files are also located in the menu item `File Browser` if you wish to see all files available within the Slack workspace.
+
+\pagebreak
+
+# Direct Messaging
+
+You may privately message individuals or a small group of individuals (up to 7) in the Slack workspace. In the `Direct Messages` area, press the $+$ symbol and search for the person you wish to message. If you can't remember their name, you can find them in by searching the `People and User Groups` menu area on the top left-hand panel.
+
+# More Questions
+
+Check out the associated Slack Overview video to see demonstrations of these concepts in action. If you have more questions, let us know!
+
+
