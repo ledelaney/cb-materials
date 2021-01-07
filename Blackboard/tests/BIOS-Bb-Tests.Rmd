@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 5"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: true
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_options: margin = 1in
@@ -22,8 +22,8 @@ geometry_options: margin = 1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -73,25 +73,71 @@ smallfont <- function(mytext, output = myoutput){
 
 #`r popups(mylink = "input/package-util.png")`
 
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "latex"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "html"){
+    return(NULL)
+    
+  }
+}
+
+
 ```
+
+`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Getting Started
 
-The Blackboard `Test` entity can be used for a variety of assessments, both timed and untimed, synchronous and asynchronous. This document will cover the basics and best practices on how to set up and deploy a Blackboard `Test`. If there is something you wish to do that this document does not cover, please reach out to the BIOS course building team.
+The Blackboard `Test` entity can be used for a variety of assessments, both timed and untimed, synchronous and asynchronous. 
+This document will cover the basics and best practices on how to set up and deploy a Blackboard `Test`. 
+If there is something you wish to do that this document does not cover, please reach out to the BIOS course building team.
 
 # Creating Pools
 
-Building a question pool is an important first step of setting up a test or quiz. If you skip setting up a pool, you won't be able to re-use any of your questions in other tests (e.g., in the final exam), you won't be able to easily export your questions to a new course, and you won't be able to take advantage of tools like randomized `Question Blocks`.
+Building a question pool is an important first step of setting up a test or quiz. 
+If you skip setting up a pool, you won't be able to re-use any of your questions in other tests (e.g., in the final exam), you won't be able to easily export your questions to a new course, and you won't be able to take advantage of tools like randomized `Question Blocks`.
 
 ## Making a New Pool
 
-To start your `Pool`, navigate to `Course Tools` $\rightarrow$ `Tests, Surveys, and Pools`. Select `Pools` and `Build Pool` at the top of the screen. Give your pool a meaningful name indicating the test or quiz these questions to which these questions will be added. No need to fill out the instructions or description just yet, but you can if you like. Select `Submit`.
+To start your `Pool`, navigate to `Course Tools` $\rightarrow$ `Tests, Surveys, and Pools`. 
+Select `Pools` and `Build Pool` at the top of the screen. 
+Give your pool a meaningful name indicating the test or quiz these questions to which these questions will be added. 
+No need to fill out the instructions or description just yet, but you can if you like. 
+Select `Submit`.
 
 ## Getting Your Questions Ready
 
-Blackboard is finicky when it comes to formatting. However, it's important that your questions are formatted correctly or the test can become extremely challenging for students to interpret. One option is to put all of your questions and answers into an Excel file and upload this to Blackboard. [This document explains the general process](https://www.wbu.edu/wbu-online/documents/Uploading_Tests_in_Blackboard_using_Excel.pdf), but keep in mind you will still need to go back and check that each question imported properly.
+Blackboard is finicky when it comes to formatting. 
+However, it's important that your questions are formatted correctly or the test can become extremely challenging for students to interpret. 
+One option is to put all of your questions and answers into an Excel file and upload this to Blackboard. 
+[This document explains the general process](https://www.wbu.edu/wbu-online/documents/Uploading_Tests_in_Blackboard_using_Excel.pdf), but keep in mind you will still need to go back and check that each question imported properly.
 
-Another way is to write your questions as usual in a Word document. You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. If you do copy-paste something that includes formatting, I recommend selecting `Remove Formatting` when the pop-up prompt appears. `r popups(mylink = "input/images/remove-formatting.png")`
+Another way is to write your questions as usual in a Word document. 
+You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. 
+While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. 
+If you do copy-paste something that includes formatting, I recommend selecting `Remove Formatting` when the pop-up prompt appears. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/remove-formatting.png")`
 
 :::: {.blackbox data-latex=""}
 
@@ -101,27 +147,48 @@ You spend all this time formatting your exam just so, and then it looks differen
 
 \vspace{3mm}
 
-The Blackboard text editor helps you format your questions, but the data that Blackboard actually uses to render the exam on a student's browser isn't coming from here -- it's coming from the underlying `HTML` code. That is, Blackboard takes what is inside the text editor and converts this into `HTML`, often poorly. The result is a totally wonky looking exam question.
+The Blackboard text editor helps you format your questions, but the data that Blackboard actually uses to render the exam on a student's browser isn't coming from here -- it's coming from the underlying `HTML` code. 
+That is, Blackboard takes what is inside the text editor and converts this into `HTML`, often poorly. 
+The result is a totally wonky looking exam question.
 
 \vspace{3mm}
 
-There are two ways to ensure your exam questions will look the same for all your students. One is to judiciously `Remove Formatting`, and keep your questions as simple as possible formatting-wise (I recommend only using bold, italics, images, and tables). The second is to select the `< >` button on the lower row of the text editor and edit your questions directly from the source. If you are familiar with `HTML`, you'll notice that there is often an enormous amount of "junk" in here.
+There are two ways to ensure your exam questions will look the same for all your students. 
+One is to judiciously `Remove Formatting`, and keep your questions as simple as possible formatting-wise (I recommend only using bold, italics, images, and tables). 
+The second is to select the `< >` button on the lower row of the text editor and edit your questions directly from the source. 
+If you are familiar with `HTML`, you'll notice that there is often an enormous amount of "junk" in here.
 
 ::::
 
 # Questions
 
-To create a new question, hover over `Create Question` on the top toolbar from within the `Pool`. There are many options, and only a few will be covered in detail here -- this document will focus on the question-types that are automatically graded by Blackboard. (Some other options you may wish to use if you are creating an untimed assignment and not a test or quiz. See the section below on `Creating Assignments with Tests.`) 
+To create a new question, hover over `Create Question` on the top toolbar from within the `Pool`. 
+There are many options, and only a few will be covered in detail here -- this document will focus on the question-types that are automatically graded by Blackboard. 
+(Some other options you may wish to use if you are creating an untimed assignment and not a test or quiz. 
+See the section below on `Creating Assignments with Tests.`) 
 
-For most questions: Once you have entered your question, removed unnecessary formatting and set it up with bold and/or italics as you like, put an extra space below the question itself by holding down the `Shift` key and then pressing `Enter`. (In `HTML`, you can add `<br/>` underneath your question.) Otherwise, your question will appear very close to the answers and it can be difficult to distinguish them.
+For most questions: Once you have entered your question, removed unnecessary formatting and set it up with bold and/or italics as you like, put an extra space below the question itself by holding down the `Shift` key and then pressing `Enter`. 
+(In `HTML`, you can add `<br/>` underneath your question.) 
+Otherwise, your question will appear very close to the answers and it can be difficult to distinguish them.
 
-If your answer choices include superscript or subscript, the choice will be "pushed down" or "pushed up" relative to the answer numbering and selection button. To make it easier for students to visually tell which choice to select, add a "box" around the answer choices. Do this by selecting the image of a table in the middle row towards the right. Choose 1 row and 1 column. `r popups(mylink = "input/images/make-box.png")` Once your box appears, navigate to the the same table image and select `Table Properties` $\rightarrow$ `Advanced`. Select `Solid` border style and black color. `r popups(mylink = "input/images/make-border.png")` Once finished, you can change the size of the box with your cursor.
+If your answer choices include superscript or subscript, the choice will be "pushed down" or "pushed up" relative to the answer numbering and selection button. 
+To make it easier for students to visually tell which choice to select, add a "box" around the answer choices. 
+Do this by selecting the image of a table in the middle row towards the right. 
+Choose 1 row and 1 column. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/make-box.png")` 
+Once your box appears, navigate to the the same table image and select `Table Properties` $\rightarrow$ `Advanced`. 
+Select `Solid` border style and black color. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/make-border.png")` 
+Once finished, you can change the size of the box with your cursor.
 
 ## Multiple Choice
 
-There are a few things to keep in mind when creating multiple choice questions. For answer numbering, choose `A, B, C`. I have experimented with not using answer numbering, but the answer choices often do not appear next to the appropriate button and it can be difficult for students to tell which selection goes with which answer.
+There are a few things to keep in mind when creating multiple choice questions. 
+For answer numbering, choose `A, B, C`. 
+I have experimented with not using answer numbering, but the answer choices often do not appear next to the appropriate button and it can be difficult for students to tell which selection goes with which answer.
 
-If you want the answer choices to appear in random order, **you must select the box for this option here**. `r popups(mylink = "input/images/mc-options.png")`
+If you want the answer choices to appear in random order, **you must select the box for this option here**. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/mc-options.png")`
 
 ## Either/Or 
 
@@ -133,15 +200,21 @@ For multiple-choice-style questions that have more than one answer.
 
 ## Matching 
 
-Allows for the pairing of specific question and answer choices. For example, you can create four questions and four answers that the students need to "pair" together.
+Allows for the pairing of specific question and answer choices. 
+For example, you can create four questions and four answers that the students need to "pair" together.
 
 ## Ordering 
 
-Can be used when students need to put something in numerical order. Make sure that you rearrange the "display" order so that it appears mixed for students. Students will see a drop-down menu of numbers (if you keep the numeric default) next to each choice where they can select the appropriate order.
+Can be used when students need to put something in numerical order. 
+Make sure that you rearrange the "display" order so that it appears mixed for students. 
+Students will see a drop-down menu of numbers (if you keep the numeric default) next to each choice where they can select the appropriate order.
 
 ## Fill in Multiple Blanks
 
-This is a great option to replace multi-part multiple-choice questions. Let's say you have an image and you would like to ask a series of questions about the same image. Use the example below as a guide. The location of the bracketed numbers (e.g., `[1]`) is where a blank box will appear for students to add in their answer choice.
+This is a great option to replace multi-part multiple-choice questions. 
+Let's say you have an image and you would like to ask a series of questions about the same image. 
+Use the example below as a guide. 
+The location of the bracketed numbers (e.g., `[1]`) is where a blank box will appear for students to add in their answer choice.
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
 
@@ -149,65 +222,103 @@ knitr::include_graphics(path = "input/images/multiple-blanks.png")
 
 ```
 
-Make sure to select `Allow Partial Credit`. Select `Next` and add in the appropriate answer choices. Do not select `Case Sensitive`. _Note: Each question within the Fill in the Multiple Blanks question must have the same point value!_
+Make sure to select `Allow Partial Credit`. 
+Select `Next` and add in the appropriate answer choices. 
+Do not select `Case Sensitive`. 
+_Note: Each question within the Fill in the Multiple Blanks question must have the same point value!_
 
 ## Creating Versions of the Same Question
 
-To reduce opportunities for cheating, it's nice to have several similar questions that vary slightly. Instead of creating each from scratch, you can make one first. From there, press the grey caret next to the question in the `Pool` and choose `Copy`. `r popups(mylink = "input/images/copy-question.png")` Make sure to delete the top "copy of" that Blackboard automatically adds in your new question. From here, you can easily change minor details of the question and select `Save`. The new question will be added to your pool.
+To reduce opportunities for cheating, it's nice to have several similar questions that vary slightly. 
+Instead of creating each from scratch, you can make one first. 
+From there, press the grey caret next to the question in the `Pool` and choose `Copy`. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/copy-question.png")` 
+Make sure to delete the top "copy of" that Blackboard automatically adds in your new question. 
+From here, you can easily change minor details of the question and select `Save`. 
+The new question will be added to your pool.
 
 ## Tagging Questions
 
-As you continue in the semester building pools and tests, your question bank will grow quite large. It can often be a challenge to find the question you would like to add to your test. To make life easier, remember to tag each question with either a `Category` or `Topic` while you create them. These options are usually found at the bottom of the screen after the answer choices. `r popups(mylink = "input/images/categories.png")` I recommend tagging by chapter (e.g., `Category` is `Chapter 8`) or content topic (e.g., `Topic` is `Meiosis`). These will be saved for future questions.
+As you continue in the semester building pools and tests, your question bank will grow quite large. 
+It can often be a challenge to find the question you would like to add to your test. 
+To make life easier, remember to tag each question with either a `Category` or `Topic` while you create them. 
+These options are usually found at the bottom of the screen after the answer choices. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/categories.png")` 
+I recommend tagging by chapter (e.g., `Category` is `Chapter 8`) or content topic (e.g., `Topic` is `Meiosis`). 
+These will be saved for future questions.
 
-When you go to build your test, you will have the option to sort your question pools by question type, category, or topic. This helps tremendously when trying to find and add specific questions.
+When you go to build your test, you will have the option to sort your question pools by question type, category, or topic. 
+This helps tremendously when trying to find and add specific questions.
 
 ## Images in Answer Choices
 
-To add images to your answer choices, select `Question Settings` from the top menu panel from within your `Pool`. Make sure to check the boxes to allow images for answer choices (and/or feedback). 
-`r popups(mylink = "input/images/question-settings.png")`
+To add images to your answer choices, select `Question Settings` from the top menu panel from within your `Pool`. 
+Make sure to check the boxes to allow images for answer choices (and/or feedback). 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/question-settings.png")`
 
 _Note: This setting takes some time to update!_
 
 # Building Tests
 
-Once you have completed the question pool, the next step is to build the test itself. In `Course Tools` $\rightarrow$ `Tests, Surveys, and Pools`, navigate to `Tests`. Select `Build Test`. Here, you can add a `Description` of the test and `Instructions` on how to complete it. (You can also add these later if you aren't yet ready.) Select `Submit`.
+Once you have completed the question pool, the next step is to build the test itself. 
+In `Course Tools` $\rightarrow$ `Tests, Surveys, and Pools`, navigate to `Tests`. 
+Select `Build Test`. 
+Here, you can add a `Description` of the test and `Instructions` on how to complete it. 
+(You can also add these later if you aren't yet ready.) 
+Select `Submit`.
 
 ## Adding Pool Questions
 
-Hover over `Reuse Question` and select `Find Questions`. On the left-hand side, choose the appropriate pool. You can also select other options like `Question types`, `Categories`, or `Topics` to sort your questions if you have added these tags.
-`r popups(mylink = "input/images/add-pool.png")`
+Hover over `Reuse Question` and select `Find Questions`. 
+On the left-hand side, choose the appropriate pool. 
+You can also select other options like `Question types`, `Categories`, or `Topics` to sort your questions if you have added these tags.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/add-pool.png")`
 
 ## Creating Question Sets
 
-Perhaps you would like to create several similar questions and have students see one option at random. Select `Create Question Set` and use the same procedure as above to select the questions you want included. Once you click `Submit`, you will be able to edit how many questions from the set you want students to see.
-`r popups(mylink = "input/images/ques-display.png")`
+Perhaps you would like to create several similar questions and have students see one option at random. 
+Select `Create Question Set` and use the same procedure as above to select the questions you want included. 
+Once you click `Submit`, you will be able to edit how many questions from the set you want students to see.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/ques-display.png")`
 You can also edit the number of points that each question is worth.
-`r popups(mylink = "input/images/ques-point.png")`
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/ques-point.png")`
 
 ## Setting Point Values and Re-ordering Questions
 
-If you wish to have students see questions at random, do not worry about the order of the questions as you build your test. However, if the order matters, you can use the up-and-down arrows on the upper right-hand corner to change the question order as you prefer. 
-`r popups(mylink = "input/images/ques-order.png")`
+If you wish to have students see questions at random, do not worry about the order of the questions as you build your test. 
+However, if the order matters, you can use the up-and-down arrows on the upper right-hand corner to change the question order as you prefer. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/ques-order.png")`
 You can also drag-and-drop the questions to the proper place.
 
 _Note: To save headaches, I have one tab open where I create questions in the Pool, and one tab open where I add questions to the Test. That is, I build the test as I create the pool questions._
 
 Point values are set by clicking on the box on the right-hand side of the question that says `Points` and editing the point value. 
-`r popups(mylink = "input/images/ques-point.png")`
-You can set any point value you like, but Blackboard will throw an error for decimals. Click `OK`, and then select `Submit` a second time. Try and keep the decimals to tenths only, to avoid headaches. For `Question Sets`, each question must have the same point value.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/ques-point.png")`
+You can set any point value you like, but Blackboard will throw an error for decimals. 
+Click `OK`, and then select `Submit` a second time. 
+Try and keep the decimals to tenths only, to avoid headaches. For `Question Sets`, each question must have the same point value.
 
 Once you have finished building the test, check the top to see the total number of questions that students will see, and the total point value for the entire test.
-`r popups(mylink = "input/images/ques-totals.png")`
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/ques-totals.png")`
 
 # Test Deployment
 
-The pool is finished and the test is built and ready-to-go. Now it needs to be `Deployed` to a folder so that students can access it. Navigate to the appropriate folder, hover over `Assessments` and select `Test`. Choose your test from the list of available tests. Now you are ready to decide on the many test options.
+The pool is finished and the test is built and ready-to-go. 
+Now it needs to be `Deployed` to a folder so that students can access it. 
+Navigate to the appropriate folder, hover over `Assessments` and select `Test`. 
+Choose your test from the list of available tests. 
+Now you are ready to decide on the many test options.
 
 _Note: As soon as a test is deployed in a folder, a Grade Center column appears. It's usually good practice to hide this column until all the students have completed the exam._
 
 ## Test Options
 
-First, you may fill out a `Content Link Description`. This is separate from the original `Description` and `Instructions` you may have filled out previously. This is simply a description of the _link_ to the test, and it's usually unnecessary. If you already wrote your `Description` and `Instructions`, you'll see an option to show these to students before they begin the exam. I generally select both of these options. (If you did not fill these out previously, more on how to fill them out later below.) 
+First, you may fill out a `Content Link Description`. 
+This is separate from the original `Description` and `Instructions` you may have filled out previously. 
+This is simply a description of the _link_ to the test, and it's usually unnecessary. 
+If you already wrote your `Description` and `Instructions`, you'll see an option to show these to students before they begin the exam. 
+I generally select both of these options. 
+(If you did not fill these out previously, more on how to fill them out later below.) 
 
 Here are some tips regarding the `Test Availability` options:
 
@@ -226,18 +337,31 @@ Here are some tips regarding the `Test Availability` options:
 12. `Results and Feedback`: I recommend changing this from `After Submission` to `On a Specific Date`. It wouldn't be ideal for students to see the answers immediately after submitting, because they could share these with others. See the section below dedicated to this topic for more.
 13. `Test Presentation`: Generally recommended to select `All at Once` to prevent technical issues, and `Randomize Questions`.
 
-To add a `Description` or `Instructions`, click the grey caret next to the name of your test (top of the screen) from _within_ the `Test Options` page. To get to the `Test Options` page, select the grey caret next to the test itself in Blackboard (e.g., from within your Exams folder), and select `Edit the Test Options`. 
+To add a `Description` or `Instructions`, click the grey caret next to the name of your test (top of the screen) from _within_ the `Test Options` page. 
+To get to the `Test Options` page, select the grey caret next to the test itself in Blackboard (e.g., from within your Exams folder), and select `Edit the Test Options`. 
 
 ## Test Availability Exceptions
 
-It is good practice to first create a `Group` (do this within `Users & Groups` and make sure it is **not** visible to students!) that contains the LOA students with their extension times. For example, a group titled `LOAs: 2x`. Under `Test Availability Exceptions` select `Add User or Group`. In the `Search` drop-down menu, select `Group` and simply press enter. All of the course groups will appear. Select the appropriate LOA groups.
+It is good practice to first create a `Group` (do this within `Users & Groups` and make sure it is **not** visible to students!) that contains the LOA students with their extension times. 
+[(More on how to create groups here.)](https://help.blackboard.com/Learn/Instructor/Interact/Course_Groups/Create_Groups)
+For example, a group titled `LOAs: 2x`. Under `Test Availability Exceptions` select `Add User or Group`. 
+In the `Search` drop-down menu, select `Group` and simply press enter. 
+All of the course groups will appear. Select the appropriate LOA groups.
 
-Under `Timer` select the appropriate number of minutes given the groups' LOA status. **You must also enter an availability window, or the exam link will never be visible for these students**. 
-`r popups(mylink = "input/images/test-exceptions.png")`
+Under `Timer` select the appropriate number of minutes given the groups' LOA status. 
+**You must also enter an availability window, or the exam link will never be visible for these students**. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/test-exceptions.png")`
 
-Here is a common scenario: a student is in the middle of taking an exam and has an internet issue. They contact you that they are re-starting the router but the time is ticking on their attempt. Add the student as an _individual_ exception here following the above procedure. (Select `Add User or Group` $\rightarrow$ Select the student.) If the exam is 60 minutes in length and you wish to give them 15 extra minutes, put 75 minutes in their `Timer`. This will give them an additional 15 minutes. To the student, it will appear that the clock is still counting down, but the clock will refresh with 15 more minutes once 60 minutes expires. 
+Here is a common scenario: a student is in the middle of taking an exam and has an internet issue. 
+They contact you that they are re-starting the router but the time is ticking on their attempt. 
+Add the student as an _individual_ exception here following the above procedure. 
+(Select `Add User or Group` $\rightarrow$ Select the student.) 
+If the exam is 60 minutes in length and you wish to give them 15 extra minutes, put 75 minutes in their `Timer`. 
+This will give them an additional 15 minutes. 
+To the student, it will appear that the clock is still counting down, but the clock will refresh with 15 more minutes once 60 minutes expires. 
 
-**Note:** If the student has an LOA, be sure to add the 15 minutes to the LOA time, for instance 135 minutes instead of 120 minutes. An individual user exception _will_ override a group exception, but you will see a yellow exclamation point warning symbol. 
+**Note:** If the student has an LOA, be sure to add the 15 minutes to the LOA time, for instance 135 minutes instead of 120 minutes. 
+An individual user exception _will_ override a group exception, but you will see a yellow exclamation point warning symbol. 
 
 **Once the attempt has been submitted, there is no way to add more time or to allow the student to re-enter their exam.**
 
@@ -245,30 +369,43 @@ Here is a common scenario: a student is in the middle of taking an exam and has 
 
 _Note: The screenshots below show feedback settings checked additively with `1` displaying only `Score per question` and `5` displaying when every single option box is checked._
 
-1. `Score per question` shows the earned point values for each question. `r popups(mylink = "input/images/feedback-settings/only-score-per-question.png")`
-2. `Show incorrect questions` will allow the students to see which questions they answered incorrectly. `r popups(mylink = "input/images/feedback-settings/score-per-question-and-incorrect.png")`
-3. `All answers` shows all of the possible answers students could have selected (i.e., all answer choices). `r popups(mylink = "input/images/feedback-settings/scoreper-incorrect-allanswers.png")`
-4. `Correct` shows correct answers for each of the questions. `r popups(mylink = "input/images/feedback-settings/scoreper-incorrect-allanswers-correct.png")`
-5. `Submitted` shows only the answer that the student selected or submitted. `r popups(mylink = "input/images/feedback-settings/everythingchecked.png")`
+1. `Score per question` shows the earned point values for each question. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/feedback-settings/only-score-per-question.png")`
+2. `Show incorrect questions` will allow the students to see which questions they answered incorrectly. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/feedback-settings/score-per-question-and-incorrect.png")`
+3. `All answers` shows all of the possible answers students could have selected (i.e., all answer choices). 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers.png")`
+4. `Correct` shows correct answers for each of the questions. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers-correct.png")`
+5. `Submitted` shows only the answer that the student selected or submitted. 
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/feedback-settings/everythingchecked.png")`
 6. `Feedback` will display any feedback you added to the questions.
 
 
-When the feedback becomes available, students can see it by going to the `My Grades` menu item on Blackboard and clicking on the test or quiz. Keep in mind they can not see feedback for assessments when the grade column in Blackboard is hidden. You can view their attempts by selecting the grey caret next to their grade in Grade Center and selecting `View Attempt`.
+When the feedback becomes available, students can see it by going to the `My Grades` menu item on Blackboard and clicking on the test or quiz. 
+Keep in mind they can not see feedback for assessments when the grade column in Blackboard is hidden. 
+You can view their attempts by selecting the grey caret next to their grade in Grade Center and selecting `View Attempt`.
 
 ## Deployment Strategies
 
-For synchronous exams, the easiest method is to create a Blackboard menu item (folder) which is hidden until exam time. This way, the availability window on the test itself can be wide, but students will only be able to access it for a short period when the exam folder becomes visible to them. (This is done manually.) If they accidentally navigate away from the exam page, the folder can be briefly unhidden to allow them to re-enter the exam.
+For synchronous exams, the easiest method is to create a Blackboard menu item (folder) which is hidden until exam time. This way, the availability window on the test itself can be wide, but students will only be able to access it for a short period when the exam folder becomes visible to them. 
+(This is done manually.) 
+If they accidentally navigate away from the exam page, the folder can be briefly unhidden to allow them to re-enter the exam.
 
 For asynchronous exams or exams with a wide window for completion, availability windows can be set inside the test options for the appropriate window.
 
-Lastly, the final step before students can see the test is to select `Make Available`. This can be done from inside the `Test Option`, or by selecting the grey caret next to the test within Blackboard and choosing `Make Available`.
+Lastly, the final step before students can see the test is to select `Make Available`. 
+This can be done from inside the `Test Option`, or by selecting the grey caret next to the test within Blackboard and choosing `Make Available`.
 
 
 # Checking for Errors
 
-For courses with a high volume of Blackboard `Tests` that include many versions of questions, you may want to create a separate `Test` for the sole purpose of error review. While it's essential to check the `Test` the students will see, it's also important to make sure _all_ question versions are correct and rendering properly.
+For courses with a high volume of Blackboard `Tests` that include many versions of questions, you may want to create a separate `Test` for the sole purpose of error review. 
+While it's essential to check the `Test` the students will see, it's also important to make sure _all_ question versions are correct and rendering properly.
 
-Use the procedure above to create a `Test`. Call this something like `Exam 1: Error review` -- and make sure you hide the associated column in Grade Center. Add every question (all versions!) to this test, and don't worry about points. 
+Use the procedure above to create a `Test`. 
+Call this something like `Exam 1: Error review` -- and make sure you hide the associated column in Grade Center. 
+Add every question (all versions!) to this test, and don't worry about points. 
 
 Set the following `Test Options`:
 
@@ -276,34 +413,67 @@ Set the following `Test Options`:
 2. Under `Results and Feedback` select `After Submission` and check every single box (All answers, correct, incorrect, etc.)
 3. Do not randomize the questions
 
-When using this test for review, scroll to the very bottom and choose `Save and Submit`. Blackboard will throw an error indicating no questions were answered. Select `OK`. Select `OK` again on the next screen. Now you will see all the questions, and all the "correct" answers for each question. Make sure from here that there are no errors!
+When using this test for review, scroll to the very bottom and choose `Save and Submit`. 
+Blackboard will throw an error indicating no questions were answered. 
+Select `OK`. 
+Select `OK` again on the next screen. 
+Now you will see all the questions, and all the "correct" answers for each question. 
+Make sure from here that there are no errors!
 
 _Note: Always correct errors from within the Pool, and not in the exam itself! This way, every instance of the Pool question in all tests will also be appropriately edited._
 
 # Automatic Re-Grading Options
 
-You may find once students complete a test that there was an error in one of the questions. There are a few ways that you can automate the processes of re-grading. Questions can also retroactively be made `Extra Credit` by selecting `Edit the Test`, clicking the box on the right-hand side of the question with point-values, and checking the box `Extra Credit`.
+You may find once students complete a test that there was an error in one of the questions. 
+There are a few ways that you can automate the processes of re-grading. 
+Questions can also retroactively be made `Extra Credit` by selecting `Edit the Test`, clicking the box on the right-hand side of the question with point-values, and checking the box `Extra Credit`.
 
 ## Multiple-choice
 
-**Scenario 1:** You notice that an incorrect choice was labeled as the correct answer. Navigate to the appropriate question `Pool`, locate the question, and select `Edit`. Use the left-hand selectors next to the answer choices to choose the correct choice. Select `Submit and Update Attempts`.
+**Scenario 1:** You notice that an incorrect choice was labeled as the correct answer. 
+Navigate to the appropriate question `Pool`, locate the question, and select `Edit`. 
+Use the left-hand selectors next to the answer choices to choose the correct choice. 
+Select `Submit and Update Attempts`.
 
-**Scenario 2:** There are actually two answer choices that are correct instead of only one. As above, `Edit` the question and select the box `Allow Partial Credit`. Under the second correct choice in the box labeled `Partial Credit`, enter `100%`.
+**Scenario 2:** There are actually two answer choices that are correct instead of only one. 
+As above, `Edit` the question and select the box `Allow Partial Credit`. 
+Under the second correct choice in the box labeled `Partial Credit`, enter `100%`.
 
-**Scenario 3:** There are no correct answers and you want to give everyone credit for the question. Navigate to the exam in Grade Center and select the grey caret next to the exam name. Choose `Grade Questions`. Click on the blue number in the column `Responses` associated with that question. Select the option under `Question Information` to `Give Full Credit`. (Note: This option will not appear if the question is within a `Question Set`. If this happens, you'll need to use the procedure under `Scenario 2` giving `100%` for all the answer choices.)
+**Scenario 3:** There are no correct answers and you want to give everyone credit for the question. 
+Navigate to the exam in Grade Center and select the grey caret on the top of the column next to the exam name. 
+Choose `Grade Questions`. 
+Click on the blue number in the column `Responses` associated with that question. 
+Select the option under `Question Information` to `Give Full Credit`. 
+(Note: This option will not appear if the question is within a `Question Set`. 
+If this happens, you'll need to use the procedure under `Scenario 2` giving `100%` for all the answer choices.)
 
 ## Either-or-type
 
-To give everyone credit for this type of question, navigate to the exam in Grade Center and select the grey caret next to the exam name. Choose `Grade Questions`. Click on the blue number in the column `Responses` associated with that question. Select the option under `Question Information` to `Give Full Credit`. (Note: This option may not appear if the question is within a `Question Set`. If this happens, you may need to manually give students credit for the question. The `Partial Credit` option does not appear for these question types.)
+To give everyone credit for this type of question, navigate to the exam in Grade Center and select the grey caret next to the exam name. 
+Choose `Grade Questions`. 
+Click on the blue number in the column `Responses` associated with that question. 
+Select the option under `Question Information` to `Give Full Credit`. 
+(Note: This option may not appear if the question is within a `Question Set`. 
+If this happens, you may need to manually give students credit for the question. 
+The `Partial Credit` option does not appear for these question types.)
 
 ## Fill in Multiple Blanks
 
-If you wish to change correct answers, or add more than one correct answer, navigate to the question inside of the appropriate `Pool` and select `Edit`. Click `Next` and find the option to add `Number of Answers`. You can add as many additional correct answers as you like.
+If you wish to change correct answers, or add more than one correct answer, navigate to the question inside of the appropriate `Pool` and select `Edit`. 
+Click `Next` and find the option to add `Number of Answers`. 
+You can add as many additional correct answers as you like.
 
 # Creating Assignments with Tests
 
-For some assignments, it may be easier to create a `Test` than to use the `Assignment` feature. For instance, if you are asking students to define a variety of terms, or to write short essay responses to a series of questions. You can use the question type `Essay` for this purpose.
+For some assignments, it may be easier to create a `Test` than to use the `Assignment` feature. 
+For instance, if you are asking students to define a variety of terms, or to write short essay responses to a series of questions. 
+You can use the question type `Essay` for this purpose.
 
-Follow the instructions above on how to create pools, questions, and question prompts. When you go to set your test options, **do not** check the options for `Timer` or `Autosubmit`. You can still set a due date or an availability window, but now the students are free to enter the `Test` as many times as they please within the availability window. They should just remember to `Save` each of their answers.
+Follow the instructions above on how to create pools, questions, and question prompts. 
+When you go to set your test options, **do not** check the options for `Timer` or `Autosubmit`. 
+You can still set a due date or an availability window, but now the students are free to enter the `Test` as many times as they please within the availability window. 
+They should just remember to `Save` each of their answers.
 
-`r smallfont("Version 5: Compiled by L E Delaney for UIC Biological Sciences Department")`
+`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+
+`r html.only("<span style = font-size:10px>Version 5: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`

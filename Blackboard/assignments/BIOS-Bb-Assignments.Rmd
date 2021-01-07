@@ -72,7 +72,47 @@ smallfont <- function(mytext, output = myoutput){
 
 #\href{}{}
 
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
 ```
+
+`r html.only('<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Getting Started
 
@@ -182,5 +222,9 @@ A pop-up appears with each rubric selection and any written feedback added by th
 
 _Note: Students are not able to view feedback if the column in Grade Center is hidden._
 
-`r smallfont("Version 2: Compiled by L E Delaney for UIC Biological Sciences Department")`
+`r html.only('<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+
+`r html.only("<span style = font-size:10px>Version 2: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
+
+
 

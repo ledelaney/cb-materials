@@ -2,7 +2,7 @@
 title: "Slack Overview for BIOS"
 subtitle: "UIC BioS"
 author: "L E Delaney"
-version: "Version 2"
+version: "Version 3"
 output:
   pdf_document:
       template: input/template.tex
@@ -17,6 +17,99 @@ documentclass: "article"
 fontsize: 11pt
 geometry_opts: margin = 1.1in
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+myoutput <- "latex"
+#myoutput <- "html"
+
+popups <- function(mylink, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\href{", mylink, "}", "{[View Screenshot]}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<a href="', mylink, '"', " ",
+                'target="popup"', " ", 
+                'onclick="', 
+                "window.open('", mylink, "', 'popup','width=600,height=600'); return false;",
+                '">', " ", "[View Screenshot]", "</a>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+smallfont <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\tiny{", mytext, "}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<span style = font-size:10px>', mytext, "</span>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+# <a href="http://kanishkkunal.in" 
+#   target="popup" 
+#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#     [View Screenshot]
+# </a>
+
+#\href{}{}
+
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+```
 
 # Requirements
 
