@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"
 output:
+  pdf_document:
+    latex_engine: xelatex
+    template: input/template.tex
+    keep_tex: false
   html_document:
     theme: cosmo
     highlight: tango
     toc: true
     toc_float: true
-  pdf_document:
-    latex_engine: xelatex
-    template: input/template.tex
-    keep_tex: false
 geometry_opts: margin=1in
 ---
 
@@ -20,8 +20,8 @@ geometry_opts: margin=1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-#myoutput <- "latex"
-myoutput <- "html"
+myoutput <- "latex"
+#myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -106,15 +106,15 @@ html.only <- function(mytext, output = myoutput){
 
 1. Enter the **older** Blackboard course that has content you want to copy.
 2. On the left-hand menu panel, expand the `Packages and Utilities` section and click `Course Copy`.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/package-util.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/package-util.png")`
 3. Select the only option: `Copy Course Materials into an Existing Course`. 
 4. In the `Destination Course ID` box click the Browse button to view a list of your courses. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/destination-course.png")`
-    + In the popup window that appears, select the appropriate course ID from your list of courses and click `Submit`. The course ID will populate in the `Destination Course ID Box`. You may also copy this destination ID and paste it in the box. `r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/copy-options.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/destination-course.png")`
+    + In the popup window that appears, select the appropriate course ID from your list of courses and click `Submit`. The course ID will populate in the `Destination Course ID Box`. You may also copy this destination ID and paste it in the box. `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/copy-options.png")`
 6. Select the course materials that you want to copy over to the existing course. `Select All` is generally recommended but not necessary. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/copy-options.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/copy-options.png")`
 7. In the `File Attachments` section, select `Copy links and copies of the content` 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/file-attachments.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/file-attachments.png")`
 8. **DO NOT** select `Include Enrollments` in the Copy.
 9. Click `Submit`.
 
@@ -126,16 +126,16 @@ First, export the test from the current course:
 
 1. Navigate to the course that contains the test.
 2. Click `Course Tools` in the left-hand menu panel. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/tests-survey-pools.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/tests-survey-pools.png")`
 3. Ensure the `Edit Mode` is ON, found at the top-right of your course window.
 4. Click `Tests, Surveys, and Pools`. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/tests-survey-pools.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/tests-survey-pools.png")`
 5. Click `Tests`.
 6. Click the grey caret to the right of the test name. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/export-test.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/export-test.png")`
 7. Select `Export`
-    + If you choose to `Export to Content Collection`, you can select `Browse` and navigate to `Course Content` in the menu panel and select the destination course. (All of your Bb courses should appear here, but it may require some scrolling!) `r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/export-content-collection.png")`
-    + If you choose `Export to Local Computer`, you can download the .zip file to your computer. `r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/export-local.png")`
+    + If you choose to `Export to Content Collection`, you can select `Browse` and navigate to `Course Content` in the menu panel and select the destination course. (All of your Bb courses should appear here, but it may require some scrolling!) `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/export-content-collection.png")`
+    + If you choose `Export to Local Computer`, you can download the .zip file to your computer. `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/export-local.png")`
     
 \
  
@@ -143,13 +143,13 @@ Next, import the test into the course of your choice:
 
 1. Navigate to the Blackboard course where you will add the test.
 2. Click `Course Tools` in the left-hand menu panel. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/tests-survey-pools.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/tests-survey-pools.png")`
 3. Ensure the `Edit Mode` is ON, found at the top-right of your course window.
 4. Click `Tests, Surveys, and Pools`. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/tests-survey-pools.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/tests-survey-pools.png")`
 5. Click `Tests`.
 6. Click `Import Test`. `r popups(mylink = "input/images/import-test.png")`
-    + If you chose `Export to Content Collection`, select `Browse Content Collection` and look for the recently added `Test` file. `r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/browse-content.png")`
+    + If you chose `Export to Content Collection`, select `Browse Content Collection` and look for the recently added `Test` file. `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/browse-content.png")`
     + If you chose `Export to Local Computer`, select `Browse Local Files` and choose the .zip file you previously downloded.
 7. Click `Submit`.
 8. Click `OK`.
@@ -160,14 +160,14 @@ _Note: You may copy over assignments by navigating to `Packages and Utilities` $
 
 1. Ensure the `Edit Mode` is ON, found at the top-right of your course window.
 2. Click the grey caret to the right side of item/folder name. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/copy-move-item.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/copy-move-item.png")`
 3. Select `Copy` or `Move`. (You may also create a copy of the item, and then move the copy.) 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/copy-move-item.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/copy-move-item.png")`
 4. Use the `Destination Course` drop down menu to select the course where the item will go. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/move-destination.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/move-destination.png")`
 5. Click the `Destination Folder` Browse button.
 6. Select the area in the course you would like to place the item or folder in. You may need to click the Plus Sign (+ button) to find a folder within a folder. 
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/move-folder.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/move-folder.png")`
 7. Select `No` for the option `Create links for items which cannot be copied`.
 8. Click `Submit`.
 

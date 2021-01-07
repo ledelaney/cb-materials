@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"
 output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_opts: margin = 1.1in
@@ -22,8 +22,8 @@ geometry_opts: margin = 1.1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-#myoutput <- "latex"
-myoutput <- "html"
+myoutput <- "latex"
+#myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -109,7 +109,7 @@ html.only <- function(mytext, output = myoutput){
 All UIC students and faculty have access to premium Zoom accounts with their UIC email addresses, so this platform may be used as an alternative to Blackboard Collaborate for synchronous sessions.
 
 To add Zoom to your course on Blackboard, select the $+$ symbol at the top of the left-hand menu panel and choose `Tool Link`.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/add-toollink.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/add-toollink.png")`
 Type in `Zoom` and then select `Zoom Meeting` from the drop-down menu.
 Click on the newly-created `Zoom` menu item and follow the prompts.
 (You may move this menu item by dragging and dropping it, using the cursor on the outer left side.)
@@ -149,7 +149,7 @@ This individual would be a secondary host of the meeting and can allow participa
 # Starting Course Meetings
 
 To begin your meeting, enter the `Zoom` page and select `Start`.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-start-meeting.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-start-meeting.png")`
 Follow the prompt to open the Zoom app.
 If you choose to record your session, you will receive an email when it has been uploaded to the cloud after your session has ended.
 
@@ -159,22 +159,22 @@ If you choose to record your session, you will receive an email when it has been
 
 You may wish to use the `Poll` feature to engage students during your session.
 To add poll questions to your session beforehand, click on the link for the session once it has been created.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-edit.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-edit.png")`
 Scroll to the bottom of the screen and select `Download a CSV Template`.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-poll-csv.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-poll-csv.png")`
 
 You may use this template to create poll questions for your students. 
 Once you have completed your poll template, select `Import CSV`.
 Your questions are now attached.
 
 During your session, click the `Polling` button to launch your poll.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-poll.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-poll.png")`
 
 ## Emoji Feedback
 
 Synchronous sessions can be difficult without seeing students' faces: are they following along?
 You can use the `Reactions` feature to ask students for non-verbal feedback (e.g., "Give me a thumbs up if you've got it!", "Are you ready to move on? Give me a yes/no reaction!")
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-emoji.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-emoji.png")`
 
 ## Chat
 

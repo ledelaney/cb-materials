@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
 output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -23,8 +23,8 @@ geometry_opts: margin = 1.2in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-#myoutput <- "latex"
-myoutput <- "html"
+myoutput <- "latex"
+#myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -110,7 +110,7 @@ html.only <- function(mytext, output = myoutput){
 ## Adding Panopto to Blackboard
 
 To add Panopto to your course, press on the $+$ symbol at the top of the Blackboard menu panel, and select `Tool Link`.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/panopto/input/images/add-toollink.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/panopto/input/images/add-toollink.png")`
 Name your tool link `Panopto` and select `Panopto Course Tool Application` from the drop-down menu. 
 Click on the newly-created `Panotpo` menu item to ensure that Panopto is properly linked. 
 If you have not linked Panopto to your course yet, follow the prompts to do so.
@@ -137,7 +137,7 @@ For instance, if you use Panopto in the Fall and wish to use the same lectures i
 To change the settings for individual videos, hover over the lecture from within the Panopto folder.
 Press `Settings`.
 From here, use the left-hand menu panel to examine the various options and restrictions for that particular video.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/panopto/input/images/panopto-video-settings.png")`
+`r popups(mylink = "http://ledelaney.org/cb-materials/panopto/input/images/panopto-video-settings.png")`
 
 
 # Recording with Panopto
