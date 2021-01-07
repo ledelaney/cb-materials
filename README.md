@@ -6,14 +6,14 @@
 
 ## Zoom for Synchronous Teaching
 
-+ [Brief guide for Zoom in Bb](http://ledelaney.org/cb-tutorials/zoom/BIOS-Zoom-SynchLecture.html)
++ [Brief guide to Zoom in Bb](http://ledelaney.org/cb-tutorials/zoom/BIOS-Zoom-SynchLecture.html)
 
 ## Panopto for Asynchronous Teaching
 
-+ [Brief guide for Panopto in Bb](http://ledelaney.org/cb-tutorials/panopto/BIOS-Panopto-Overview.html)
++ [Brief guide to Panopto in Bb](http://ledelaney.org/cb-tutorials/panopto/BIOS-Panopto-Overview.html)
 
 ## Slack
 
-+ [Brief guide for using Slack](http://ledelaney.org/cb-tutorials/slack/BIOS-Slack-Overview.html)
++ [Brief guide to using Slack](http://ledelaney.org/cb-tutorials/slack/BIOS-Slack-Overview.html)
 
 
