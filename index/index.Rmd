@@ -1,0 +1,28 @@
+---
+title: "Course Building Materials"
+subtitle: "UIC Department of Biological Sciences"
+output:
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+---
+
+## Blackboard
+
++ <a href="http://ledelaney.org/cb-tutorials/blackboard/BIOS-Bb-Tests.html" target="_blank">Blackboard tests</a>
++ <a href="http://ledelaney.org/cb-tutorials/blackboard/BIOS-Bb-Assignments.html" target="_blank">Blackboard assignments and rubrics</a>
++ <a href="http://ledelaney.org/cb-tutorials/blackboard/BIOS-Bb-CopyMoveMaterials.html" target="_blank">Copy and move items between Blackboard courses</a>
+
+## Zoom for Synchronous Teaching
+
++ <a href="http://ledelaney.org/cb-tutorials/zoom/BIOS-Zoom-SynchLecture.html" target="_blank">Brief guide to Zoom in Bb</a>
+
+## Panopto for Asynchronous Teaching
+
++ <a href="http://ledelaney.org/cb-tutorials/panopto/BIOS-Panopto-Overview.html" target="_blank">Brief guide to Panopto in Bb</a>
+
+## Slack
+
++ <a href="http://ledelaney.org/cb-tutorials/slack/BIOS-Slack-Overview.html" target="_blank">Brief guide to using Slack</a>
