@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 2"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -23,8 +23,8 @@ geometry_opts: margin = 1.2in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -75,17 +75,13 @@ smallfont <- function(mytext, output = myoutput){
 
 latex.only <- function(mytext, output = myoutput){
   
-  if(output == "html"){
-    return(NULL)
-  }
-  
-  else if(output == "latex"){
+  if(output == "latex"){
     b <- paste0(mytext) %>%
       noquote()
     return(b)
   }
   
-  else if(output == "word"){
+  else if(output != "latex"){
     return(NULL)
     
   }
@@ -93,26 +89,21 @@ latex.only <- function(mytext, output = myoutput){
 
 html.only <- function(mytext, output = myoutput){
   
-  if(output == "latex"){
-    return(NULL)
-  }
-  
-  else if(output == "html"){
+  if(output == "html"){
     b <- paste0(mytext) %>%
       noquote()
     return(b)
   }
   
-  else if(output == "word"){
+  else if(output != "html"){
     return(NULL)
     
   }
 }
 
-
 ```
 
-`r html.only('<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Getting Started
 
@@ -222,7 +213,7 @@ A pop-up appears with each rubric selection and any written feedback added by th
 
 _Note: Students are not able to view feedback if the column in Grade Center is hidden._
 
-`r html.only('<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 `r html.only("<span style = font-size:10px>Version 2: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
 

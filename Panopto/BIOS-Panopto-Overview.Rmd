@@ -1,18 +1,18 @@
 ---
-title: "Panopto Overview for BIOS"
+title: "Using Panopto for Asynchronous Lectures"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -23,8 +23,8 @@ geometry_opts: margin = 1.2in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -75,17 +75,13 @@ smallfont <- function(mytext, output = myoutput){
 
 latex.only <- function(mytext, output = myoutput){
   
-  if(output == "html"){
-    return(NULL)
-  }
-  
-  else if(output == "latex"){
+  if(output == "latex"){
     b <- paste0(mytext) %>%
       noquote()
     return(b)
   }
   
-  else if(output == "word"){
+  else if(output != "latex"){
     return(NULL)
     
   }
@@ -93,53 +89,73 @@ latex.only <- function(mytext, output = myoutput){
 
 html.only <- function(mytext, output = myoutput){
   
-  if(output == "latex"){
-    return(NULL)
-  }
-  
-  else if(output == "html"){
+  if(output == "html"){
     b <- paste0(mytext) %>%
       noquote()
     return(b)
   }
   
-  else if(output == "word"){
+  else if(output != "html"){
     return(NULL)
     
   }
 }
 
-
 ```
+
+`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Panopto in Blackboard
 
 ## Adding Panopto to Blackboard
 
-To add Panopto to your course, press on the $+$ symbol at the top of the Blackboard menu panel, and select `Tool Link`. Name your tool link `Panopto` and select `Panopto Course Tool Application`. Click on the newly-created `Panotpo` menu item to ensure that Panopto is properly linked. Occasionally an error occurs where the `LTI Link` is not created -- if this happens, reach out to LTS.
+To add Panopto to your course, press on the $+$ symbol at the top of the Blackboard menu panel, and select `Tool Link`.
+Name your tool link `Panopto` and select `Panopto Course Tool Application` from the drop-down menu. 
+Click on the newly-created `Panotpo` menu item to ensure that Panopto is properly linked. 
+If you have not linked Panopto to your course yet, follow the prompts to do so.
+Occasionally an error occurs where the `LTI Link` is not created -- if this happens, reach out to LTS.
 
 ## Navigating Panopto in Blackboard
 
-Once Panopto is properly linked to Blackboard, selecting the `Panopto` menu item will open up `Panopto Content`. By default, you will be inside the folder for that particular course. You can change this folder by selecting the downward arrow adjacent to the name of the course on the top of the Panopto screen. However, you will want to use this folder for lectures that you create in that particular course -- this gives students enrolled in your course "permission" to view these videos when they are deployed on Blackboard.
+Once Panopto is properly linked to Blackboard, selecting the `Panopto` menu item will open up `Panopto Content`. 
+By default, you will be inside the parent folder for that particular course. 
+You can change this folder by selecting the downward arrow adjacent to the name of the course on the top of the Panopto screen. 
+However, you will want to use this folder for lectures that you create in that particular course -- this gives students enrolled in your course "permission" to view these videos when they are deployed on Blackboard.
 
-You may select `Add Folder` if you wish to create sub-folders for your lectures. The gear symbol at the top right-hand corner of the screen is where you can change your "global" settings for the entire folder. Once you click on the gear, you can select `Settings` and choose whether or not you want students to be able to download the videos, whether you would like captions to be created automatically (recommended!), and what kind of public commenting you would like on each video within that folder. 
+_Note: Although not easy to find, students can technically view **every** video inside the main course parent folder. If you want a "staging area" to prepare lectures, it's a good idea to create an additional folder with restricted permissions._
 
-You can associate other course folders with this course by selecting `Re-Configure` at the bottom of your Panopto screen. For instance, if you use Panopto in the Fall and wish to use the same lectures in the Spring, you can add the Fall folder into your Spring course.
+You may select `Add Folder` if you wish to create sub-folders for your lectures. 
+The gear symbol at the top right-hand corner of the screen is where you can change your "global" settings for the entire folder. 
+Once you click on the gear, you can select `Settings` and choose whether or not you want students to be able to download the videos, whether you would like captions to be created automatically (recommended!), and what kind of public commenting you would like on each video within that folder. 
+
+You can associate other course folders with this course by selecting `Re-Configure` at the bottom of your Panopto screen. 
+For instance, if you use Panopto in the Fall and wish to use the same lectures in the Spring, you can add the Fall folder into your Spring course.
+
+### Settings for individual videos
+
+To change the settings for individual videos, hover over the lecture from within the Panopto folder.
+Press `Settings`.
+From here, use the left-hand menu panel to examine the various options and restrictions for that particular video.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/panopto/input/images/panopto-video-settings.png")`
 
 
 # Recording with Panopto
 
-To create new Panopto content, you will select the `Create` option at the top of the screen. From here, you can upload pre-created mp4 (video) files if you choose to record lectures using other software. 
+To create new Panopto content, you will select the `Create` option at the top of the screen. 
 
 _Note: Unfortunately, Panopto has a tendency to crash occasionally. Try not to record especially long lectures all in one sitting. You can easily record in 10-15 minute chunks, and add these together later._
 
 ## Downloading Panopto Software
 
-To record using Panopto, you need to download the Panopto software on to your computer. If you select `Create` and then `Record a New Session`, there is an option to open or download Panopto. Select `Download Panopto` and follow the prompts to get the software set up on your computer.
+To record using Panopto, you need to download the Panopto software on to your computer. 
+If you select `Create` $\rightarrow$ `Record a New Session`, there is an option to open or download Panopto. 
+Select `Download Panopto` and follow the prompts to get the software set up on your computer.
 
 ## Using Panopto to Record Lectures 
 
-Once Panopto is on your computer, select `Create` and `Record a New Session`. Choose the option to `Open` Panopto. You will see something like this:
+Once Panopto is on your computer, select `Create` $\rightarrow$ `Record a New Session`. 
+Choose the option to `Open` Panopto. 
+You will see something like this:
 
 ```{r, echo=FALSE, fig.align='center', out.width="85%"}
 
@@ -147,17 +163,34 @@ knitr::include_graphics(path = "input/images/panopto-record-screen.png")
 
 ```
 
-The default setting is to upload your recording to the folder for the course in which you selected `Create`. You can change this by changing the Folder located on the top of the screen. You can also change the name of your recording. Panopto automatically saves a copy of the files on to your computer. When you `Record`, Panopto creates three separate files: one with the sound and recording of you (`Primary Source`), one with the lecture slides (`Secondary Source`), and another file of the slides themselves.
+The default setting is to upload your recording to the folder for the course in which you selected `Create`. 
+You can change this by changing the Folder located on the top of the screen. 
+You can also change the name of your recording. 
+Panopto automatically saves a copy of the files on to your computer. 
+When you `Record`, Panopto creates three separate files: one with the sound and recording of you (`Primary Source`), one with the lecture slides (`Secondary Source`), and another file of the slides themselves.
 
-The `Primary Source` should be your face. If students watch the lecture in full-screen, they will only see the `Secondary Source` (but still hear you speaking), so make sure the Secondary Source is your lecture slides or a document camera. (If you wish to use a document camera, you can change the Source below from `Built-In Display` to your external camera.) If you have sound within your lecture you want to be recorded (e.g., an embedded video), make sure `Capture Computer Audio` is selected. Lastly, select the option to `Record PowerPoint/Keynote` if you are using one of these programs to display your lecture slides.
+The `Primary Source` should be your face. 
+If students watch the lecture in full-screen, they will see the `Secondary Source` as the main content with a smaller image of you on the bottom of the screen, so make sure the Secondary Source is your lecture slides or a document camera. 
+(If you wish to use a document camera, you can change the Source below from `Built-In Display` to your external camera.) 
+If you have sound within your lecture you want to be recorded (e.g., an embedded video), make sure `Capture Computer Audio` is selected. 
+Lastly, select the option to `Record PowerPoint/Keynote` if you are using one of these programs to display your lecture slides.
 
-If you are recording PowerPoint slides, make sure you have your PowerPoint file open and ready to go. You will click `Record` in Panopto, and then go into your slides and press `Presentation Mode`. You won't be able to see the Panopto software, but it will be recording your face and built-in display in the background! Once you finish recording, go back to Panopto and select `Stop`. 
+If you are recording PowerPoint slides, make sure you have your PowerPoint file open and ready to go. 
+You will click `Record` in Panopto, and then navigate to your slides and press `Presentation Mode`. 
+You won't be able to see the Panopto software, but it will be recording your face and built-in display in the background! 
+Once you finish recording, go back to Panopto and select `Stop`. 
 
 _Note: Yes, there will be an awkward piece of footage at the beginning and end of each video as you navigate to your slides and back. This can easily be edited out inside of Panopto later._
 
+## Adding Already-Made Videos
+
+Select `Create` $\rightarrow$ `Upload media` to upload pre-created mp4 (video) files if you choose to record lectures using other software. 
+
 # Editing Panopto Videos
 
-You'll receive an email from Panopto when your video has uploaded to Blackboard. The longer the video, the longer this process will take -- another reason to record in smaller chunks. When your video is ready in Blackboard, navigate to the `Panopto Content` area and hover over your video with the cursor and select `Edit` to navigate to the Panopto editing area.
+You'll receive an email from Panopto when your video has uploaded to Blackboard. 
+The longer the video, the longer this process will take -- another reason to record in smaller chunks. 
+When your video is ready in Blackboard, navigate to the `Panopto Content` area and hover over your video with the cursor and select `Edit` to navigate to the Panopto editing area.
 
 ```{r, echo=FALSE, fig.align='center', out.width="85%"}
 
@@ -167,41 +200,71 @@ knitr::include_graphics(path = "input/images/panopto-editing.png")
 
 ## Making Cuts
 
-Likely the first thing you will want to do is cut out the beginning and end footage where you are preparing to record and ending your recording. The bottom right-hand panel is where you will make cuts. Notice in the image above, the first and last portions of the video editing area are grey -- simply press down in this area, and drag your cursor until the grey area covers the portion you wish to cut. If you go too far, drag it back. If you want to remove the cut entirely, drag it _all_ the way back.
+Likely the first thing you will want to do is cut out the beginning and end footage where you are preparing to record and ending your recording. 
+The bottom right-hand panel is where you will make cuts. 
+Notice in the image above, the first and last portions of the video editing area are grey -- simply press down in this area, and drag your cursor until the grey area covers the portion you wish to cut. 
+If you go too far, drag it back. 
+If you want to remove the cut entirely, drag it _all_ the way back.
 
 _Note: Panopto never cuts footage permanently. If you want to remove a cut you always can._
 
 ## Table of Contents
 
-Panopto uses slide titles to create a table of contents. You can edit these by selecting `Contents` on the far left-hand side, and then hovering over the title you wish to change. You can also add a title for portions of the lecture with no slides, or slides with no title.
+Panopto uses slide titles to create a table of contents. 
+You can edit these by selecting `Contents` on the far left-hand side, and then hovering over the title you wish to change. 
+You can also add a title for portions of the lecture with no slides, or slides with no title.
 
 ## Adding Captions
 
-It's recommended that you change your global folder settings to automatically import captions. Otherwise, you can select `Captions` and choose `Import Captions`. Panopto is not perfect at this, so check these to make sure that your words have been accurately translated.
+It's recommended that you change your global folder settings to automatically import captions. 
+Otherwise, you can select `Captions` and choose `Import Captions`. 
+Panopto is not perfect at this, so check these to make sure that your words have been accurately translated.
 
 ## Merging Panopto Videos 
 
-Press down with your cursor in the video editing area where you wish to add another Panopto video (e.g., the end of the video). You should see a red line appear. Select the $+$ symbol on the panel just above the video editing area (next to a pair of green scissors that, as far as I know, don't do anything). Select `Add a Clip` and a menu will appear with all your other Panopto recordings. Select the recording you wish to add and choose `Insert`.
+Press down with your cursor in the video editing area where you wish to add another Panopto video (e.g., the end of the video). 
+You should see a red line appear. 
+Select the $+$ symbol on the panel just above the video editing area (next to a pair of green scissors that, as far as I know, don't do anything). 
+Select `Add a Clip` and a menu will appear with all your other Panopto recordings. 
+Select the recording you wish to add and choose `Insert`.
+
+_Note: Quizzes cannot be added inside of clips! If you string together multiple lectures, quizzes can only be added to the original parent lecture._
 
 ## Adding YouTube Videos or Other Clips
 
-To add a YouTube video, select the $+$ symbol and choose `Add a YouTube video`. Make sure the red line appears where you want the video to show up in your lecture. Paste the YouTube video link, and choose the start and end times you wish to show if applicable. Make sure `Show YouTube` controls and `Autoplay` are both selected.
+To add a YouTube video, select the $+$ symbol and choose `Add a YouTube video`. 
+Make sure the red line appears where you want the video to show up in your lecture. 
+Paste the YouTube video link, and choose the start and end times you wish to show if applicable. 
+Make sure `Show YouTube` controls and `Autoplay` are both selected.
 
-If you have "raw" Panopto files (as in, each of the separately recorded videos), you can manually add them by selecting `Add a Stream`. You will be prompted to drop both a primary video and audio file (recording from `Primary Source`) and a secondary video or PowerPoint file.
+If you have "raw" Panopto files (as in, each of the separately recorded videos), you can manually add them by selecting `Add a Stream`. 
+You will be prompted to drop both a primary video and audio file (recording from `Primary Source`) and a secondary video or PowerPoint file.
 
 # Embedding Quiz Questions
 
-Embedded Panopto questions can (somewhat) replace activities like iClickers. Make sure the red line appears in the video editing area where you want your question to appear for students. Keep in mind that these embedded questions will only be graded by Blackboard if they are accessed by students in a specific way. LTS recommends using these only for non-graded activities. (If you want these quizzes to be graded, see procedure below.)
+Embedded Panopto questions can (somewhat) replace activities like iClickers. 
+Make sure the red line appears in the video editing area where you want your question to appear for students. 
+Keep in mind that these embedded questions will only be graded by Blackboard if they are accessed by students in a specific way. 
+LTS recommends using these only for non-graded activities. 
+(If you want these quizzes to be graded, see procedure below.)
 
 ## Adding Questions
 
-Select the $+$ symbol and choose `Add a Quiz`. You may give the quiz a title by editing the top area that says `Quiz`. If you want Blackboard to automatically grade it, only do a multiple choice or a true/false style question. Type in your question and the appropriate answer choices. I recommend adding only one question to a single quiz, but you are able to add as many as you like.
+Select the $+$ symbol and choose `Add a Quiz`. 
+You may give the quiz a title by editing the top area that says `Quiz`. 
+If you want Blackboard to automatically grade it, only do a multiple choice or a true/false style question. 
+Type in your question and the appropriate answer choices. 
+I recommend adding only one question to a single quiz, but you are able to add as many as you like.
 
-Once you finish adding your questions, you can choose from a variety of options. You can allow students to re-take the quiz (or not), you can show them their grade immediately (or not), and you can prevent them from advancing in the video until they take the quiz.
+Once you finish adding your questions, you can choose from a variety of options. 
+You can allow students to re-take the quiz (or not), you can show them their grade immediately (or not), and you can prevent them from advancing in the video until they take the quiz.
 
 ## Linking Panopto Questions to Grade Center
 
-Keep note of how many questions you embed in a lecture, and determine how many points you want each question to be worth. All questions must be worth the same amount of points. Now, let's imagine you have deployed your lecture in a lecture folder (more on how to do this below). You want the embedded questions in this lecture to be associated with a column in Grade Center.
+Keep note of how many questions you embed in a lecture, and determine how many points you want each question to be worth. 
+All questions must be worth the same amount of points. 
+Now, let's imagine you have deployed your lecture in a lecture folder (more on how to do this below). 
+You want the embedded questions in this lecture to be associated with a column in Grade Center.
 
 Follow this procedure:
 
@@ -211,31 +274,42 @@ Follow this procedure:
 4. Choose the number of points -- if you have 3 questions and you want them to be worth 1 point each, choose 3 points. If you want them to be worth two points each, choose 6 points.
 5. `Visible to Students` is referring to the column in Grade Center. Select `Yes` or `No`.
 6. A due date is somewhat meaningless, as late answers are indistinguishable from on-time answers within Blackboard.
-
-\pagebreak
-
-7. `Permit Users to View this Content` is referring to this quiz link. Select `Yes`. **Students must click on the quiz link within Blackboard to access the Panopto quiz, or the grades will not be recorded in Bb!**
+7. `Permit Users to View this Content` is referring to this quiz link. Select `Yes`. 
+**Students must click on the quiz link within Blackboard to access the Panopto quiz, or the grades will not be recorded in Bb!**
 8. Click `Submit`.
 9. Click on the link of the item you just created. You will be prompted to select a video to which this quiz item belongs. **This last step is very important!**
 
-There is currently no way to add a "due date" to the Panopto quiz questions. You can simply hide the link to the Panopto quiz when you no longer want students to be able to attempt it.
+There is currently no way to add a "due date" to the Panopto quiz questions. 
+You can simply hide the link to the Panopto quiz when you no longer want students to be able to attempt it.
 
 # Putting a Panopto Lecture in Blackboard
 
-To add your lecture to Blackboard, head to the area you wish to put your lecture (for instance, in `Weekly Content` or in a lecture folder). In the Blackboard toolbar, hover over `Build Content` and select `Panopto Video Embed`. Select the video you wish to embed.
+To add your lecture to Blackboard, head to the area you wish to put your lecture (for instance, in `Weekly Content` or in a lecture folder). 
+In the Blackboard toolbar, hover over `Build Content` and select `Panopto Video Embed`. 
+Select the video you wish to embed.
 
 There are two ways to control when lectures become visible to students:
 
 1. Hover over the video from inside of Panopto and select `Settings`. Scroll to the bottom of `Overview` and add availability times.
 2. On your deployed lecture, click the grey arrow and select `Adaptive Release`. Select the date criteria.
 
-You may notice that your embedded lecture displays an ugly image of when you were preparing to record. If this happens, head to `Panopto Content`, hover over your video and select `Edit`. Select the option to `Edit the Preview Image`. You can choose an image from your computer. Remember to select `Save`.
+## Changing primary display image
+
+You may notice that your embedded lecture displays an ugly image of when you were preparing to record. 
+If this happens, head to `Panopto Content`, hover over your video and select `Edit`. 
+Select the option to `Edit the Preview Image`. 
+You can choose an image from your computer. Remember to select `Save`.
 
 # Student Panopto Experience
 
-While Panopto and Blackboard work together, these are technically two separate accounts. This means that you cannot select `Student Preview` and see how Panopto looks for your students, because each time you enter Panopto you are technically entering a separate platform outside of Blackboard. (You also cannot test the Panopto quiz functionality for this reason.)
+While Panopto and Blackboard work together, these are technically two separate accounts. 
+This means that you cannot select `Student Preview` and see how Panopto looks for your students, because each time you enter Panopto you are technically entering a separate platform outside of Blackboard. 
+(You also cannot test the Panopto quiz functionality for this reason.)
 
-Students can view your lecture in two ways. The first is to simply press play on the embedded content in Blackboard. If they do this, they will see your video in the bottom left-hand corner, and see the lecture slides full-screen. The second way is to press the diagonal arrow on the bottom right-hand side of the video preview (`Watch in Panopto`). 
+Students can view your lecture in two ways. 
+The first is to simply press play on the embedded content in Blackboard. 
+If they do this, they will see your video in the bottom left-hand corner, and see the lecture slides full-screen. 
+The second way is to press the diagonal arrow on the bottom right-hand side of the video preview (`Watch in Panopto`). 
 
 ```{r, echo=FALSE, fig.align='center', out.width="95%"}
 
@@ -244,12 +318,23 @@ knitr::include_graphics(path = "input/images/panopto-student-view.png")
 ```
 
 
-Students can see you, the slide video, and a nice clickable outline of slides below. They can also see the table of contents, and leave personal notes for themselves at specific timestamps. Students are also able to ask public questions that are timestamped in the video in the `Discussion` area, but you can turn this off in settings if you don't like this option. Lastly, they can `Bookmark` important areas to return to later. If they select the full-screen option here, they will see only the slide video and hear your voice.
+Students can see you, the slide video, and a nice clickable outline of slides below. 
+They can also see the table of contents, and leave personal notes for themselves at specific timestamps. 
+Students are also able to ask public questions that are timestamped in the video in the `Discussion` area, but you can turn this off in settings if you don't like this option. 
+Lastly, they can `Bookmark` important areas to return to later. 
+If they select the full-screen option here, they will see only the slide video and hear your voice.
 
-**Important note:** Students are also able to view Panopto videos from the Panopto app. Any video included within the parent course folder that does not have set availability windows can be viewed via this app. If you prefer students do not see future lectures, set availability windows for the individual lectures by hovering over the video, selecting `Settings`, and scrolling to the bottom of the page.
+**Important note:** Students are also able to view Panopto videos from the Panopto app. 
+This occassionally causes issues -- ever get 100 emails from students asking "permission" to view a lecture?
+It is likely students are attempting to access from the Panopto app and not from Blackboard itself, which they should try first.
+You can always set availability windows for individual lectures by hovering over the video, selecting `Settings`, and scrolling to the bottom of the page.
 
 ```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
 knitr::include_graphics(path = "input/images/availability.png")
 
 ```
+
+`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+
+`r html.only("<span style = font-size:10px>Version 3: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
