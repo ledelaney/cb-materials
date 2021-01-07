@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 5"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: true
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: true
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_options: margin = 1in
@@ -22,8 +22,8 @@ geometry_options: margin = 1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -473,6 +473,11 @@ Follow the instructions above on how to create pools, questions, and question pr
 When you go to set your test options, **do not** check the options for `Timer` or `Autosubmit`. 
 You can still set a due date or an availability window, but now the students are free to enter the `Test` as many times as they please within the availability window. 
 They should just remember to `Save` each of their answers.
+
+# More Resources
+
++ [Video tutorial on Bb tests](https://drive.google.com/file/d/1kwM2w9TCf_XmRl9zJYaIUMiLB2pkF7r7/view?usp=sharing)
++ [KU resources for Bb tests](https://blackboard.ku.edu/tests-quizzes)
 
 `r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 

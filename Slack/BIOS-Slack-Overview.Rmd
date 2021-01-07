@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_opts: margin = 1.1in
@@ -22,8 +22,8 @@ geometry_opts: margin = 1.1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -181,18 +181,17 @@ Files can generally be previewed in Slack, but they can also be downloaded by ho
 Files are also located in the menu item `File Browser` if you wish to see all files available within the Slack workspace.
 `r popups(mylink = "http://ledelaney.org/cb-materials/slack/input/images/slack-file-browse.png")`
 
-\pagebreak
-
 # Direct Messaging
 
 You may privately message individuals or a small group of individuals (up to 7) in the Slack workspace. 
 In the `Direct Messages` area, press the $+$ symbol and search for the person you wish to message. 
 If you can't remember their name, you can find them in by searching the `People and User Groups` menu area on the top left-hand panel.
 
-# More Questions
+# More Resources
 
-Check out the [associated Slack Overview video](https://drive.google.com/file/d/1otltPSIP3Brabtu88iupECe6bDBB-3zW/view?usp=sharing) to see demonstrations of these concepts in action. 
-If you have more questions, let us know!
++ [Video tour of Slack](https://drive.google.com/file/d/1otltPSIP3Brabtu88iupECe6bDBB-3zW/view?usp=sharing)
++ [Slack for beginners YouTube Video](https://www.youtube.com/watch?v=7YUTc4Cigc8&ab_channel=Howfinity)
++ [Slack tutorial webpage](https://slack.com/resources/using-slack/how-to-use-slack)
 
 `r html.only('<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 

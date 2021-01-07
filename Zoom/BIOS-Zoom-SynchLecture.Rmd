@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 geometry_opts: margin = 1.1in
@@ -22,8 +22,8 @@ geometry_opts: margin = 1.1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -195,8 +195,14 @@ To link your iPad (or iPhone) to Zoom, [follow the procedure here](https://suppo
 
 My general procedure is to export a `PPT` file as a `PDF` and then use an app like [`PDF Expert`](https://pdfexpert.com/lp-free-apple-btn?utm_source=google&utm_medium=cpc&utm_campaign=pdf-lp-mac_test_two&utm_google-campaign=pdf-lp-mac_test_two&utm_content=447928800396&utm_term=pdf&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v13iUjUTzFTsShwuUNCDMZqF-T3knPOsgy_PRot27BmE1DI6hD_ICfBoCzjUQAvD_BwE) for annotations.
 This app has several nice features allowing you to control how the students view your PDF, and providing many annotation options (e.g., highlighter, marker, text, and so on).
-(I use the free version of this app.)
+The free version of the app has all of these options.
 Annotating a tablet is easiest with a stylus, which you can get online for relatively low-cost.
+
+# More Resources
+
++ [Zoom training and materials](https://support.zoom.us/hc/en-us/articles/360029527911)
++ [Linking an iPad to Zoom](https://support.zoom.us/hc/en-us/articles/201379235-Sharing-your-screen-iOS-with-the-Zoom-Desktop-Client)
++ [PDF expert](https://pdfexpert.com/lp-free-apple-btn?utm_source=google&utm_medium=cpc&utm_campaign=pdf-lp-mac_test_two&utm_google-campaign=pdf-lp-mac_test_two&utm_content=447928800396&utm_term=pdf&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v13iUjUTzFTsShwuUNCDMZqF-T3knPOsgy_PRot27BmE1DI6hD_ICfBoCzjUQAvD_BwE)
 
 
 `r html.only('<a href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`

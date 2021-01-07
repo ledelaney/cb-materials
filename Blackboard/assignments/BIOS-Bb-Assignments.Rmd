@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 2"
 output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -23,8 +23,8 @@ geometry_opts: margin = 1.2in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-#myoutput <- "latex"
-myoutput <- "html"
+myoutput <- "latex"
+#myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -212,6 +212,13 @@ knitr::include_graphics(path = "input/images/student-rubric.png")
 A pop-up appears with each rubric selection and any written feedback added by the grader. 
 
 _Note: Students are not able to view feedback if the column in Grade Center is hidden._
+
+# More Resources
+
++ [ACCC quick-guide for Bb Assignment set-up](https://drive.google.com/file/d/1cQiVXKMnDQ45v8l3B8DP5kHIxH5iv7LI/view?usp=sharing)
++ [Bb help page for Assignments](https://help.blackboard.com/Learn/Instructor/Assignments/Create_and_Edit_Assignments)
++ [YouTube video on Bb Assignments](https://www.youtube.com/watch?v=hUXXCp1pnHs&feature=emb_logo&ab_channel=BlackboardInc.)
++ [YouTube video on creating Bb Rubrics](https://www.youtube.com/watch?v=VgKIkeo-t3Q&t=1s)
 
 `r html.only('<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 

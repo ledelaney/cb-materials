@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"
 output:
-  pdf_document:
-    latex_engine: xelatex
-    template: input/template.tex
-    keep_tex: false
   html_document:
     theme: cosmo
     highlight: tango
     toc: true
     toc_float: true
+  pdf_document:
+    latex_engine: xelatex
+    template: input/template.tex
+    keep_tex: false
 geometry_opts: margin=1in
 ---
 
@@ -20,8 +20,8 @@ geometry_opts: margin=1in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -137,8 +137,7 @@ First, export the test from the current course:
     + If you choose to `Export to Content Collection`, you can select `Browse` and navigate to `Course Content` in the menu panel and select the destination course. (All of your Bb courses should appear here, but it may require some scrolling!) `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/export-content-collection.png")`
     + If you choose `Export to Local Computer`, you can download the .zip file to your computer. `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/export-local.png")`
     
-\
- 
+
 Next, import the test into the course of your choice:
 
 1. Navigate to the Blackboard course where you will add the test.
@@ -170,6 +169,11 @@ _Note: You may copy over assignments by navigating to `Packages and Utilities` $
 `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/move-folder.png")`
 7. Select `No` for the option `Create links for items which cannot be copied`.
 8. Click `Submit`.
+
+# More Resources
+
++ [KU resources for copying and moving content in Bb](https://blackboard.ku.edu/copying-course-content)
++ [YouTube video showing copying and moving content in Bb](https://www.youtube.com/watch?v=dO-IjSiiY1M&ab_channel=SDWTechnologyIntegrator) (looks slightly different but same procedure!)
 
 `r html.only('<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 

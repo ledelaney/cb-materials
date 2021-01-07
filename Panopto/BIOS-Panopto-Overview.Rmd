@@ -4,15 +4,15 @@ subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
 output:
-  pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
   html_document:
     highlight: tango
     theme: cosmo
     toc: true
     toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -23,8 +23,8 @@ geometry_opts: margin = 1.2in
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
@@ -335,6 +335,17 @@ You can always set availability windows for individual lectures by hovering over
 knitr::include_graphics(path = "input/images/availability.png")
 
 ```
+
+# More Resources
+
++ [Tutorial video for Panopto](https://drive.google.com/file/d/1bUKi5K7-V7cqmFHDtFhVPP-epq0S0b6o/view?usp=sharing)
++ [Panopto video guides](https://howtovideos.hosted.panopto.com/Panopto/Pages/Folders/DepartmentHome.aspx?folderID=4b9de7ae-0080-4158-8496-a9ba01692c2e)
++ [ACCC Panopto quick-guide](https://uofi.app.box.com/s/39x6jxlqptj8dum88qqo4c4z4uo9881g)
++ [UIC video: Getting started in Panopto](https://uic.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=658317eb-2d15-443f-9bf6-aafd0159cd2b)
++ [UIC video: Video editing in Panopto](https://uic.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=298f9eaa-b385-4afd-aa0e-ab9201453cef)
++ [ACCC quick-guide for Panopto folder sharing](https://drive.google.com/file/d/1ELZh_MzX23EZSc8_2BUOWM52Cx5bryzD/view?usp=sharing)
++ [How long is data maintained in Panopto?](https://answers.uillinois.edu/uic/96586)
++ [Record a presentation in PowerPoint](https://support.microsoft.com/en-us/office/record-a-slide-show-with-narration-and-slide-timings-0b9502c6-5f6c-40ae-b1e7-e47d8741161c?ui=en-us&rs=en-us&ad=us)
 
 `r html.only('<a href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
