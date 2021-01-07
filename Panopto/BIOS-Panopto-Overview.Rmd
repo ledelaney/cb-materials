@@ -103,13 +103,14 @@ html.only <- function(mytext, output = myoutput){
 
 ```
 
-`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Panopto in Blackboard
 
 ## Adding Panopto to Blackboard
 
 To add Panopto to your course, press on the $+$ symbol at the top of the Blackboard menu panel, and select `Tool Link`.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/panopto/input/images/add-toollink.png")`
 Name your tool link `Panopto` and select `Panopto Course Tool Application` from the drop-down menu. 
 Click on the newly-created `Panotpo` menu item to ensure that Panopto is properly linked. 
 If you have not linked Panopto to your course yet, follow the prompts to do so.
@@ -335,6 +336,6 @@ knitr::include_graphics(path = "input/images/availability.png")
 
 ```
 
-`r html.only('<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 `r html.only("<span style = font-size:10px>Version 3: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`

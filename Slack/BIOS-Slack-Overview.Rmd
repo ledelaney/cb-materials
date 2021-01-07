@@ -102,7 +102,7 @@ html.only <- function(mytext, output = myoutput){
 
 ```
 
-`r html.only('<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Requirements
 
@@ -166,7 +166,7 @@ To keep things organized, pay attention to a few things:
 `r popups(mylink = "http://ledelaney.org/cb-tutorials/blackboard/input/images/slack-at.png")`
 
 Once you've posted something, you may edit or delete it by hovering over the message and pressing the vertical `...` (or clicking on it in your phone) and selecting either of those options.
-`r popups(mylink = "http://ledelaney.org/cb-tutorials/slack/input/images/slack-edit-message.png")`s
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/slack/input/images/slack-edit-message.png")`
 
 # File Sharing 
 
@@ -194,7 +194,7 @@ If you can't remember their name, you can find them in by searching the `People 
 Check out the [associated Slack Overview video](https://drive.google.com/file/d/1otltPSIP3Brabtu88iupECe6bDBB-3zW/view?usp=sharing) to see demonstrations of these concepts in action. 
 If you have more questions, let us know!
 
-`r html.only('<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+`r html.only('<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 `r html.only("<span style = font-size:10px>Version 3: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
 

@@ -1,0 +1,204 @@
+---
+title: "Using Zoom for Synchronous Lectures"
+subtitle: "UIC BioS"
+author: "L E Delaney"
+version: "Version 1"
+output:
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
+documentclass: "article"
+fontsize: 11pt
+geometry_opts: margin = 1.1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+#myoutput <- "latex"
+myoutput <- "html"
+
+popups <- function(mylink, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\href{", mylink, "}", "{[View Screenshot]}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<a href="', mylink, '"', " ",
+                'target="popup"', " ", 
+                'onclick="', 
+                "window.open('", mylink, "', 'popup','width=600,height=600'); return false;",
+                '">', " ", "[View Screenshot]", "</a>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+smallfont <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\tiny{", mytext, "}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<span style = font-size:10px>', mytext, "</span>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+# <a href="http://kanishkkunal.in" 
+#   target="popup" 
+#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#     [View Screenshot]
+# </a>
+
+#\href{}{}
+
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "latex"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "html"){
+    return(NULL)
+    
+  }
+}
+
+```
+
+`r html.only('<a href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+
+# Getting Started
+
+All UIC students and faculty have access to premium Zoom accounts with their UIC email addresses, so this platform may be used as an alternative to Blackboard Collaborate for synchronous sessions.
+
+To add Zoom to your course on Blackboard, select the $+$ symbol at the top of the left-hand menu panel and choose `Tool Link`.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/add-toollink.png")`
+Type in `Zoom` and then select `Zoom Meeting` from the drop-down menu.
+Click on the newly-created `Zoom` menu item and follow the prompts.
+(You may move this menu item by dragging and dropping it, using the cursor on the outer left side.)
+
+# Creating Course Meetings
+
+From inside the `Zoom` menu item, new meetings can be created by selecting `Schedule a New Meeting` at the top right-hand corner.
+Any meeting that is created from within this page will be visible to anyone enrolled in the course.
+(Make sure to schedule your personal meetings from your own Zoom page and not here!)
+
+You can give your meeting a topic and description to help students get oriented (e.g., "Lucy's Drop-in Hours" or "Synchronous Discussion Session -- Mondays").
+You can choose dates and times, and you can make these sessions recurring.
+See an overview of some helpful options below.
+Once you have filled out these options, click `Save`.
+
+## Recording Sessions
+
+Select the `Meeting option` to `Record the meeting automatically` and select `In the cloud`.
+Cloud recordings of meetings should appear in the tab titled `Cloud Recordings` on the main `Zoom` page.
+
+## Privacy Settings
+
+In the area marked `Security`, you may choose whether or not you wish to have a waiting room.
+Unless there is someone monitoring for joining participants regularly, it may be best to turn off this option.
+You can restrict attendees in the following way:
+
+1. Select `Require Authentication to Join`
+2. Select `UofI Zoom Users`
+
+_Note: If this option is selected, let your students know they must use their UIC Zoom account to join your sessions._
+
+## Alternative Hosts
+
+You may add the UIC email address of another faculty member or TA at the bottom of the options screen.
+This individual would be a secondary host of the meeting and can allow participants to join, remove participants, etc.
+
+# Starting Course Meetings
+
+To begin your meeting, enter the `Zoom` page and select `Start`.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-start-meeting.png")`
+Follow the prompt to open the Zoom app.
+If you choose to record your session, you will receive an email when it has been uploaded to the cloud after your session has ended.
+
+# Engaging Students 
+
+## Polls
+
+You may wish to use the `Poll` feature to engage students during your session.
+To add poll questions to your session beforehand, click on the link for the session once it has been created.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-edit.png")`
+Scroll to the bottom of the screen and select `Download a CSV Template`.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-poll-csv.png")`
+
+You may use this template to create poll questions for your students. 
+Once you have completed your poll template, select `Import CSV`.
+Your questions are now attached.
+
+During your session, click the `Polling` button to launch your poll.
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-poll.png")`
+
+## Emoji Feedback
+
+Synchronous sessions can be difficult without seeing students' faces: are they following along?
+You can use the `Reactions` feature to ask students for non-verbal feedback (e.g., "Give me a thumbs up if you've got it!", "Are you ready to move on? Give me a yes/no reaction!")
+`r popups(mylink = "http://ledelaney.org/cb-tutorials/zoom/input/images/zoom-emoji.png")`
+
+## Chat
+
+Students will often make use of the chat to ask questions. 
+Navigate here by pressing the `Chat` button at the bottom of the screen.
+You can keep this open as a pop-up throughout your session, or have a TA monitor it for questions.
+
+# Using an iPad to Annotate Materials
+
+If you have an iPad and use a Mac system, you can share your iPad screen in the meeting.
+This is a nice feature for annotating materials as you work with students.
+
+## Linking the iPad
+
+To link your iPad (or iPhone) to Zoom, [follow the procedure here](https://support.zoom.us/hc/en-us/articles/201379235-Sharing-your-screen-iOS-with-the-Zoom-Desktop-Client)
+
+## Annotating
+
+My general procedure is to export a `PPT` file as a `PDF` and then use an app like [`PDF Expert`](https://pdfexpert.com/lp-free-apple-btn?utm_source=google&utm_medium=cpc&utm_campaign=pdf-lp-mac_test_two&utm_google-campaign=pdf-lp-mac_test_two&utm_content=447928800396&utm_term=pdf&gclid=CjwKCAiA_9r_BRBZEiwAHZ_v13iUjUTzFTsShwuUNCDMZqF-T3knPOsgy_PRot27BmE1DI6hD_ICfBoCzjUQAvD_BwE) for annotations.
+This app has several nice features allowing you to control how the students view your PDF, and providing many annotation options (e.g., highlighter, marker, text, and so on).
+(I use the free version of this app.)
+Annotating a tablet is easiest with a stylus, which you can get online for relatively low-cost.
+
+
+`r html.only('<a href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
+
+`r html.only("<span style = font-size:10px>Version 1: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
