@@ -1,4 +1,4 @@
-[All materials can be found here.](http://ledelaney.org/cb-materials/)
+[All materials and more information can be found here.](http://ledelaney.org/cb-materials/)
 
 ## Blackboard
 
