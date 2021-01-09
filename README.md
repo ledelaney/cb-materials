@@ -5,7 +5,7 @@
 + [Blackboard tests](http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html)
 + [Blackboard assignments and rubrics](http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html)
 + [Copy and move items between Blackboard courses](http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html)
-+ [Add users to Bb courses](http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html)
++ [Add users to Blackboard courses](http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html)
 
 ## Zoom for Synchronous Teaching
 
