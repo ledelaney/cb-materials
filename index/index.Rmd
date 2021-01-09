@@ -9,11 +9,46 @@ output:
     toc_float: true
 ---
 
+Find below the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see section on [Slack](http://ledelaney.org/cb-materials/index.html#slack) below for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
+
+_Note: Help me help you by adding me to your Bb course(s) as a TA or Instructor! 
+<a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html#Add_an_Individual_to_a_Bb_Course" target="_blank">Click here for instructions on how to do this.</a>_
+
+## How can I help?
+
++ Assist with building your course: copying content between courses, creating a course structure, building content areas to populate, organizing your Welcome page, and more!
++ Assist with technical questions relating to Bb, Collaborate, Panopto, Zoom, etc.
++ Assist with \& discuss best practices for online teaching tools like Bb, Collaborate, Panopto, Zoom, etc.
++ Assist with Bb test creation and test settings to ensure exams go smoothly.
++ Discuss test strategies and possibilities available within Bb.
++ Discuss best practices for assessment deployment and grading (e.g., increase transparency for students and make things easier for TAs).
++ Assist in creating Grade Center columns that can accurately calculate final letter grades specific to your course and increase transparency for students.
++ Troubleshoot student Bb issues (e.g., What's the deal with `My Grades`??, or, Why can't I see what my students can see??).
++ Assist with various Panopto challenges.
++ Other stuff unique to your needs -- feel free to reach out!
+
+While I do have some overlap with LTS, they are still your best bet for bona-fide technical glitches as they have more access to "back door" operations than I do. However, I tend to respond more quickly, and I'm always happy to help figure out whether or not the issue requires their support or is something we can fix ourselves.
+
+## Drop-in Hours
+
+I hold twice-weekly drop-in hours open to anyone teaching online this semester. No question is too big or too small and I especially encourage TAs to come by if experiencing Bb fatigue and/or confusion. 
+
+_Note: You must use your UIC Zoom account to join these sessions._
+
+**Meeting Details:** <br>
+Tuesdays at 3p and Thursdays at 2p <br>
+Meeting ID: `979 9992 4339` <br>
+Passcode: `3P*A2*X&` <br>
+[Meeting Link](https://uic.zoom.us/j/97999924339?pwd=dFlBdHRUNDZSdCtyYXJsSzZWM1g0QT09)
+
+# Materials
+
 ## Blackboard
 
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html" target="_blank">Blackboard tests</a>
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html" target="_blank">Blackboard assignments and rubrics</a>
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html" target="_blank">Copy and move items between Blackboard courses</a>
++ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html" target="_blank">Adding users to Blackboard courses</a>
 
 ## Zoom for Synchronous Teaching
 
@@ -31,4 +66,4 @@ output:
 <br>
 <br>
 <br>
-<span style = font-size:10px>Updated 1/7/2021<br>Compiled by L E Delaney for UIC Biological Sciences Department<br><a href="https://github.com/ledelaney/cb-materials" target="_blank">Associated GitHub repo here.</a></span>
+<span style = font-size:10px>Updated 1/9/2021<br>Compiled by L E Delaney for UIC Biological Sciences Department<br><a href="https://github.com/ledelaney/cb-materials" target="_blank">All materials live here and on GitHub</a></span>
