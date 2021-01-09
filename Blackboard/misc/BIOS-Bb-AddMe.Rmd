@@ -1,5 +1,5 @@
 ---
-title: "Adding People to Bb Courses"
+title: "Add Users to Blackboard Courses"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"

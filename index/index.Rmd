@@ -48,7 +48,7 @@ Passcode: `3P*A2*X&` <br>
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html" target="_blank">Blackboard tests</a>
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html" target="_blank">Blackboard assignments and rubrics</a>
 + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html" target="_blank">Copy and move items between Blackboard courses</a>
-+ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html" target="_blank">Adding users to Blackboard courses</a>
++ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html" target="_blank">Add users to Blackboard courses</a>
 
 ## Zoom for Synchronous Teaching
 
