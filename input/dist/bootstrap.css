@@ -61,7 +61,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
-  max-width: 80%;
+  max-width: 100%;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.9375rem;
   font-weight: 400;
@@ -546,39 +546,77 @@ pre code {
   overflow-y: scroll;
 }
 
+.mycontainer{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .mycontainer {
+    max-width: 560px;
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .mycontainer {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mycontainer {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mycontainer {
+    width: 80%;
+    max-width: 720px;
+  }
+}
+
 .container,
 .container-fluid,
 .container-sm,
 .container-md,
 .container-lg,
 .container-xl {
-  width: 80%;
-  padding-right: 50px;
-  padding-left: 50px;
+  max-width: 40%;
+  padding-right: 150px;
+  padding-left: 150px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 576px) {
   .container, .container-sm {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
     max-width: 540px;
+    
   }
 }
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
+    width: 80%;
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
+    width: 80%;
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 80%;
     max-width: 1140px;
   }
 }
