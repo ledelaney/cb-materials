@@ -1,15 +1,21 @@
 ---
 title: "Course Building Materials"
-subtitle: "UIC Department of Biological Sciences"
+subtitle: "UIC BioS"
+author: "L E Delaney"
+version: "Version 2"
+date: January 10, 2020
 output:
   html_document:
-    highlight: tango
-    theme: cosmo
-    toc: true
-    toc_float: true
+    template: "../input/templates/cb-html-template.html"
+    css:
+      - "../input/dist/custom.min.css"
+      - "../input/dist/bootstrap.css"
+my_toc:
+  - {title: "How Can I Help?", link: how-can-i-help}
+  - {title: "Drop-in Hours", link: drop-in-hours}
 ---
 
-Find below the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see section on [Slack](http://ledelaney.org/cb-materials/index.html#slack) below for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
+Find below the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](http://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html){target="_blank"} for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
 
 _Note: Help me help you by adding me to your Bb course(s) as a TA or Instructor! 
 <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html#Add_an_Individual_to_a_Bb_Course" target="_blank">Click here for instructions on how to do this.</a>_
@@ -35,35 +41,30 @@ I hold twice-weekly drop-in hours open to anyone teaching online this semester. 
 
 _Note: You must use your UIC Zoom account to join these sessions._
 
-**Meeting Details:** <br>
+**Meeting Details** <br>
 Tuesdays at 3p and Thursdays at 2p <br>
 Meeting ID: `979 9992 4339` <br>
 Passcode: `3P*A2*X&` <br>
-[Meeting Link](https://uic.zoom.us/j/97999924339?pwd=dFlBdHRUNDZSdCtyYXJsSzZWM1g0QT09)
+[Meeting Link](https://uic.zoom.us/j/97999924339?pwd=dFlBdHRUNDZSdCtyYXJsSzZWM1g0QT09){target="_blank"}
 
-# Materials
+<!-- # Materials -->
 
-## Blackboard
+<!-- ## Blackboard -->
 
-+ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html" target="_blank">Blackboard tests</a>
-+ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html" target="_blank">Blackboard assignments and rubrics</a>
-+ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html" target="_blank">Copy and move items between Blackboard courses</a>
-+ <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html" target="_blank">Add users to Blackboard courses</a>
+<!-- + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html" target="_blank">Blackboard tests</a> -->
+<!-- + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html" target="_blank">Blackboard assignments and rubrics</a> -->
+<!-- + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html" target="_blank">Copy and move items between Blackboard courses</a> -->
+<!-- + <a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html" target="_blank">Add users to Blackboard courses</a> -->
 
-## Zoom for Synchronous Teaching
+<!-- ## Zoom for Synchronous Teaching -->
 
-+ <a href="http://ledelaney.org/cb-materials/zoom/BIOS-Zoom-SynchLecture.html" target="_blank">Brief guide to Zoom in Bb</a>
+<!-- + <a href="http://ledelaney.org/cb-materials/zoom/BIOS-Zoom-SynchLecture.html" target="_blank">Brief guide to Zoom in Bb</a> -->
 
-## Panopto for Asynchronous Teaching
+<!-- ## Panopto for Asynchronous Teaching -->
 
-+ <a href="http://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html" target="_blank">Brief guide to Panopto in Bb</a>
+<!-- + <a href="http://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html" target="_blank">Brief guide to Panopto in Bb</a> -->
 
-## Slack
+<!-- ## Slack -->
 
-+ <a href="http://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html" target="_blank">Brief guide to using Slack</a>
+<!-- + <a href="http://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html" target="_blank">Brief guide to using Slack</a> -->
 
-<br>
-<br>
-<br>
-<br>
-<span style = font-size:10px>Updated 1/9/2021<br>Compiled by L E Delaney for UIC Biological Sciences Department<br><a href="https://github.com/ledelaney/cb-materials" target="_blank">All materials live here and on GitHub</a></span>

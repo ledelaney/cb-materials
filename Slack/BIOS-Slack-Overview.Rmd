@@ -3,19 +3,31 @@ title: "A Brief Introduction to Slack"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
+date: January 10, 2020
 output:
   html_document:
-    highlight: tango
-    theme: cosmo
-    toc: true
-    toc_float: true
+    template: ../input/templates/cb-html-template.html
+    css:
+      - ../input/dist/custom.min.css
+      - ../input/dist/bootstrap.css
   pdf_document:
-      template: input/template.tex
-      keep_tex: false 
-      latex_engine: xelatex
+    latex_engine: xelatex
+    template: ../input/templates/cb-latex-template.tex
+    keep_tex: false
 documentclass: "article"
 fontsize: 11pt
 geometry_opts: margin = 1.1in
+my_toc:
+  - {title: Requirements, link: requirements}
+  - {title: Getting Started, link: getting-started}
+  - {title: Channels, link: channels}
+  - {title: Search Bar, link: search-bar}
+  - {title: Replies and Feedback, link: replies-and-feedback}
+  - {title: File Sharing, link: file-sharing}
+  - {title: Direct Messaging, link: direct-messaging}
+  - {title: More Resources, link: more-resources}
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_bottom: '<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 
 ```{r setup, include=FALSE}
@@ -102,7 +114,6 @@ html.only <- function(mytext, output = myoutput){
 
 ```
 
-`r html.only('<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
 
 # Requirements
 
@@ -110,10 +121,10 @@ You can download the Slack app for your computer, phone, and/or tablet.
 One of the nicest features is being able move across devices easily. 
 You will also need to create an account using an email and a password.
 
-1. For your Mac computer, [download here.](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)
-2. For your iPhone, [download here.](https://slack.com/help/articles/208401947-Download-Slack-for-iOS)
-3. For your Windows computer, [download here.](https://slack.com/help/articles/209038037-Download-Slack-for-Windows)
-4. For your Android device, [download here.](https://slack.com/help/articles/207691318-Download-Slack-for-Android)
+1. For your Mac computer, [download here.](https://slack.com/help/articles/207677868-Download-Slack-for-Mac){target="_blank"}
+2. For your iPhone, [download here.](https://slack.com/help/articles/208401947-Download-Slack-for-iOS){target="_blank"}
+3. For your Windows computer, [download here.](https://slack.com/help/articles/209038037-Download-Slack-for-Windows){target="_blank"}
+4. For your Android device, [download here.](https://slack.com/help/articles/207691318-Download-Slack-for-Android){target="_blank"}
 
 # Getting Started
 
@@ -153,7 +164,7 @@ Before you ask a question in a channel, use the search bar located on the very t
 Once you search a specific term, you'll see all messages, channels, or individuals that match that search term. 
 If you see a post that looks helpful, click on it to be transported to that space in Slack.
 
-# Replies \& Feedback 
+# Replies and Feedback 
 
 Slack can quickly get messy and difficult to navigate. 
 To keep things organized, pay attention to a few things:
@@ -189,12 +200,7 @@ If you can't remember their name, you can find them in by searching the `People 
 
 # More Resources
 
-+ [Video tour of Slack](https://drive.google.com/file/d/1otltPSIP3Brabtu88iupECe6bDBB-3zW/view?usp=sharing)
-+ [Slack for beginners YouTube Video](https://www.youtube.com/watch?v=7YUTc4Cigc8&ab_channel=Howfinity)
-+ [Slack tutorial webpage](https://slack.com/resources/using-slack/how-to-use-slack)
-
-`r html.only('<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Click here to download PDF version of this document</a>')`
-
-`r html.only("<span style = font-size:10px>Version 3: Compiled by L E Delaney for UIC Biological Sciences Department</span>")`
-
++ [Video tour of Slack](https://drive.google.com/file/d/1otltPSIP3Brabtu88iupECe6bDBB-3zW/view?usp=sharing){target="_blank"}
++ [Slack for beginners YouTube Video](https://www.youtube.com/watch?v=7YUTc4Cigc8&ab_channel=Howfinity){target="_blank"}
++ [Slack tutorial webpage](https://slack.com/resources/using-slack/how-to-use-slack){target="_blank"}
 
