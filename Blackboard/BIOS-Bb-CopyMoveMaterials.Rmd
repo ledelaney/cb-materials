@@ -21,7 +21,7 @@ my_toc:
   - {title: Copy a Test or Quiz, link: copy-a-test-or-quiz}
   - {title: Copy or Move Items and Folders, link: copy-or-move-items-and-folders}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1hB-UqEaKSH2mxBf9/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 

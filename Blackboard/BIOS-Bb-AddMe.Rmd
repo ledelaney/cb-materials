@@ -158,5 +158,5 @@ Occassionally, you may have a student that needs access to a course that has alr
 
 # More Resources
 
-+ [KU resources for Users and Groups](https://blackboard.ku.edu/users-and-groups)
++ [KU resources for Users and Groups](https://blackboard.ku.edu/users-and-groups){target="_blank"}
 

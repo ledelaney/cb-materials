@@ -23,7 +23,7 @@ my_toc:
   - {title: Engaging Students, link: engaging-students}
   - {title: Using an iPad to Annotate Materials, link: using-an-ipad-to-annotate-materials}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 

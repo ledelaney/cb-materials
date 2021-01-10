@@ -25,7 +25,7 @@ my_toc:
   - {title: Grading Assignments, link: grading-assignments}
   - {title: Student View, link: student-view}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1vyRbPHGFl5-1IOi6NAxauZpUyWI01bgF/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 

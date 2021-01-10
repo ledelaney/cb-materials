@@ -26,7 +26,7 @@ my_toc:
   - {title: Putting a Panopto Lecture in Blackboard, link: putting-a-panopto-lecture-in-blackboard}
   - {title: Student Panopto Experience, link: student-panopto-experience}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1oamvzIm-TLxuht7xAL04AP5vHC_i2rYJ/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 

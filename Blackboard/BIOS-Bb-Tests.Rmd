@@ -27,7 +27,7 @@ my_toc:
   - {title: Automatic Re-Grading Options, link: automatic-re-grading-options}
   - {title: Creating Assignments with Tests, link: creating-assignments-with-tests}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtmVYAhUbgsrnIDQM_/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 

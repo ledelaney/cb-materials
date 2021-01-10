@@ -26,7 +26,7 @@ my_toc:
   - {title: File Sharing, link: file-sharing}
   - {title: Direct Messaging, link: direct-messaging}
   - {title: More Resources, link: more-resources}
-pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Download PDF version</a>.'
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1LWHZB7ih3rSfW_l29KgtoEpxxtyeG13_/view?usp=sharing" target="_blank">Download PDF version</a>'
 ---
 
