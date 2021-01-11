@@ -76,9 +76,9 @@ smallfont <- function(mytext, output = myoutput){
 }
 
 
-# <a href="http://kanishkkunal.in" 
+# <a href="https://kanishkkunal.in" 
 #   target="popup" 
-#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#   onclick="window.open('https://kanishkkunal.in','popup','width=600,height=600'); return false;">
 #     [View Screenshot]
 # </a>
 
@@ -148,7 +148,7 @@ Another way is to write your questions as usual in a Word document.
 You can then `Save As` a raw text file (.txt) and use this raw text file to copy-paste questions and answers into Blackboard. 
 While plain text generally works fine for copy-pasting, **be very careful about directly copy-pasting into Blackboard**, as the editor picks up an enormous amount of underlying formatting. 
 If you do copy-paste something that includes formatting, I recommend selecting `Remove Formatting` when the pop-up prompt appears. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/remove-formatting.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/remove-formatting.png")`
 
 :::: {.blackbox data-latex=""}
 
@@ -186,10 +186,10 @@ If your answer choices include superscript or subscript, the choice will be "pus
 To make it easier for students to visually tell which choice to select, add a "box" around the answer choices. 
 Do this by selecting the image of a table in the middle row towards the right. 
 Choose 1 row and 1 column. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/make-box.png")` 
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/make-box.png")` 
 Once your box appears, navigate to the the same table image and select `Table Properties` $\rightarrow$ `Advanced`. 
 Select `Solid` border style and black color. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/make-border.png")` 
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/make-border.png")` 
 Once finished, you can change the size of the box with your cursor.
 
 ## Multiple Choice
@@ -199,7 +199,7 @@ For answer numbering, choose `A, B, C`.
 I have experimented with not using answer numbering, but the answer choices often do not appear next to the appropriate button and it can be difficult for students to tell which selection goes with which answer.
 
 If you want the answer choices to appear in random order, **you must select the box for this option here**. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/mc-options.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/mc-options.png")`
 
 ## Either/Or 
 
@@ -243,7 +243,7 @@ _Note: Each question within the Fill in the Multiple Blanks question must have t
 To reduce opportunities for cheating, it's nice to have several similar questions that vary slightly. 
 Instead of creating each from scratch, you can make one first. 
 From there, press the grey caret next to the question in the `Pool` and choose `Copy`. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/copy-question.png")` 
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/copy-question.png")` 
 Make sure to delete the top "copy of" that Blackboard automatically adds in your new question. 
 From here, you can easily change minor details of the question and select `Save`. 
 The new question will be added to your pool.
@@ -254,7 +254,7 @@ As you continue in the semester building pools and tests, your question bank wil
 It can often be a challenge to find the question you would like to add to your test. 
 To make life easier, remember to tag each question with either a `Category` or `Topic` while you create them. 
 These options are usually found at the bottom of the screen after the answer choices. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/categories.png")` 
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/categories.png")` 
 I recommend tagging by chapter (e.g., `Category` is `Chapter 8`) or content topic (e.g., `Topic` is `Meiosis`). 
 These will be saved for future questions.
 
@@ -265,7 +265,7 @@ This helps tremendously when trying to find and add specific questions.
 
 To add images to your answer choices, select `Question Settings` from the top menu panel from within your `Pool`. 
 Make sure to check the boxes to allow images for answer choices (and/or feedback). 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/question-settings.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/question-settings.png")`
 
 _Note: This setting takes some time to update!_
 
@@ -283,34 +283,34 @@ Select `Submit`.
 Hover over `Reuse Question` and select `Find Questions`. 
 On the left-hand side, choose the appropriate pool. 
 You can also select other options like `Question types`, `Categories`, or `Topics` to sort your questions if you have added these tags.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/add-pool.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/add-pool.png")`
 
 ## Creating Question Sets
 
 Perhaps you would like to create several similar questions and have students see one option at random. 
 Select `Create Question Set` and use the same procedure as above to select the questions you want included. 
 Once you click `Submit`, you will be able to edit how many questions from the set you want students to see.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/ques-display.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/ques-display.png")`
 You can also edit the number of points that each question is worth.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/ques-point.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/ques-point.png")`
 
 ## Setting Point Values and Re-ordering Questions
 
 If you wish to have students see questions at random, do not worry about the order of the questions as you build your test. 
 However, if the order matters, you can use the up-and-down arrows on the upper right-hand corner to change the question order as you prefer. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/ques-order.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/ques-order.png")`
 You can also drag-and-drop the questions to the proper place.
 
 _Note: To save headaches, I have one tab open where I create questions in the Pool, and one tab open where I add questions to the Test. That is, I build the test as I create the pool questions._
 
 Point values are set by clicking on the box on the right-hand side of the question that says `Points` and editing the point value. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/ques-point.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/ques-point.png")`
 You can set any point value you like, but Blackboard will throw an error for decimals. 
 Click `OK`, and then select `Submit` a second time. 
 Try and keep the decimals to tenths only, to avoid headaches. For `Question Sets`, each question must have the same point value.
 
 Once you have finished building the test, check the top to see the total number of questions that students will see, and the total point value for the entire test.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/ques-totals.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/ques-totals.png")`
 
 # Test Deployment
 
@@ -361,7 +361,7 @@ All of the course groups will appear. Select the appropriate LOA groups.
 
 Under `Timer` select the appropriate number of minutes given the groups' LOA status. 
 **You must also enter an availability window, or the exam link will never be visible for these students**. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/test-exceptions.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/test-exceptions.png")`
 
 Here is a common scenario: a student is in the middle of taking an exam and has an internet issue. 
 They contact you that they are re-starting the router but the time is ticking on their attempt. 
@@ -381,15 +381,15 @@ An individual user exception _will_ override a group exception, but you will see
 _Note: The screenshots below show feedback settings checked additively with `1` displaying only `Score per question` and `5` displaying when every single option box is checked._
 
 1. `Score per question` shows the earned point values for each question. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/only-score-per-question.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/only-score-per-question.png")`
 2. `Show incorrect questions` will allow the students to see which questions they answered incorrectly. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/score-per-question-and-incorrect.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/score-per-question-and-incorrect.png")`
 3. `All answers` shows all of the possible answers students could have selected (i.e., all answer choices). 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers.png")`
 4. `Correct` shows correct answers for each of the questions. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers-correct.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/scoreper-incorrect-allanswers-correct.png")`
 5. `Submitted` shows only the answer that the student selected or submitted. 
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/everythingchecked.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/feedback-settings/everythingchecked.png")`
 6. `Feedback` will display any feedback you added to the questions.
 
 

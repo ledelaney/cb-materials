@@ -2,8 +2,8 @@
 title: "Add Users to Blackboard Courses"
 subtitle: "UIC BioS"
 author: "L E Delaney"
-version: "Version 2"
-date: January 10, 2020
+version: "Version 3"
+date: January 11, 2020
 output:
   html_document:
     template: ../input/templates/cb-html-template.html
@@ -67,9 +67,9 @@ smallfont <- function(mytext, output = myoutput){
 }
 
 
-# <a href="http://kanishkkunal.in" 
+# <a href="https://kanishkkunal.in" 
 #   target="popup" 
-#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#   onclick="window.open('https://kanishkkunal.in','popup','width=600,height=600'); return false;">
 #     [View Screenshot]
 # </a>
 
@@ -109,10 +109,10 @@ html.only <- function(mytext, output = myoutput){
 
 1. Enter the Blackboard course where you wish to add the user.
 2. On the left-hand menu panel under `Course Management`, expand the `Users and Groups` section and click `Users`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/users-groups.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/users-groups.png")`
 3. Select the option `Find Users to Enroll`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/users-to-enroll.png")`
-4. In the `Username` box, **type in the username** of the individual you wish to add. (The browse feature does not always work.) `r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/enroll-screen.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/users-to-enroll.png")`
+4. In the `Username` box, **type in the username** of the individual you wish to add. (The browse feature does not always work.) `r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/enroll-screen.png")`
 5. Select a `Role` for the individual. (See section below on `Blackboard Roles` for more information on what these designations allow.)
     + If you wish to add me to your course, please select `Teaching Assistant` or `Instructor` from the `Role` dropdown menu. If you are requesting that I move materials between courses, **please make sure to add me to all relevant courses**!
 6. Select `Yes` or `No` for `Enrollment Availability`. (`Yes` is almost always the correct option.)
@@ -144,15 +144,15 @@ Occassionally, you may have a student that needs access to a course that has alr
 1. Navigate to the old course in Blackboard where you wish to add the student.
 2. Make sure that you have all relevant information for the student saved: Grade Center data, past Assignments, etc.
 3. On the left-hand menu panel under `Course Management`, expand the `Users and Groups` section and click `Users`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/users-groups.png")` 
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/users-groups.png")` 
 4. Find the student's username. If the course is large, I recommend selecting `Show All` at the bottom of the screen and using `Ctrl+F` to search for their name.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/show-all-users.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/show-all-users.png")`
 5. Click the grey caret adjacent to the student's username and select `Remove Users From This Course`. A pop-up appears: `This action is final and cannot be undone. Delete users?` Select `OK`.
     + The reason the student needs to be deleted first is because an availability date cannot be added once the student is already in the course. Bb allows the selection `Yes` or `No` for `Enrollment Availability`, but without the date specified, the student still can't access the course. The only time the availability date can be selected is when the user is **first** added.
 6. Select the option `Find Users to Enroll`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/users-to-enroll.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/users-to-enroll.png")`
 4. In the `Username` box, **type in the username** of the individual you wish to add.  
-`r popups(mylink = "http://ledelaney.org/cb-materials/blackboard/input/images/enroll-screen.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/blackboard/input/images/enroll-screen.png")`
 5. Select a `Role` for the individual. In this case, `Student`.
 6. Under `Availability Override Date` select the date that the student should no longer have access to the course. (So, if the date selected is 10/31/2021, the student would be able to see the course until that date, but not after.)
 

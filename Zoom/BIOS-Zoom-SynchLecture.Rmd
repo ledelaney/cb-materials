@@ -3,7 +3,7 @@ title: "Using Zoom for Synchronous Lectures"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 1"
-date: January 10, 2020
+date: January 11, 2020
 output:
   html_document:
     template: ../input/templates/cb-html-template.html
@@ -22,6 +22,7 @@ my_toc:
   - {title: All About Creating Course Meetings, link: creating-course-meetings}
   - {title: Engaging Students, link: engaging-students}
   - {title: Using an iPad to Annotate Materials, link: using-an-ipad-to-annotate-materials}
+  - {title: Registration, link: registration}
   - {title: More Resources, link: more-resources}
 pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Download PDF version</a>'
 pdf_version_bottom: '<a href="https://drive.google.com/file/d/1BTRgPqhAONaxn7fcAdsjrRDZ7SzpO7Yf/view?usp=sharing" target="_blank">Download PDF version</a>'
@@ -72,9 +73,9 @@ smallfont <- function(mytext, output = myoutput){
 }
 
 
-# <a href="http://kanishkkunal.in" 
+# <a href="https://kanishkkunal.in" 
 #   target="popup" 
-#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#   onclick="window.open('https://kanishkkunal.in','popup','width=600,height=600'); return false;">
 #     [View Screenshot]
 # </a>
 
@@ -116,7 +117,7 @@ html.only <- function(mytext, output = myoutput){
 All UIC students and faculty have access to premium Zoom accounts with their UIC email addresses, so this platform may be used as an alternative to Blackboard Collaborate for synchronous sessions.
 
 To add Zoom to your course on Blackboard, select the $+$ symbol at the top of the left-hand menu panel and choose `Tool Link`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/add-toollink.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/add-toollink.png")`
 Type in `Zoom` and then select `Zoom Meeting` from the drop-down menu.
 Click on the newly-created `Zoom` menu item and follow the prompts.
 (You may move this menu item by dragging and dropping it, using the cursor on the outer left side.)
@@ -156,7 +157,7 @@ This individual would be a secondary host of the meeting and can allow participa
 # Starting Course Meetings
 
 To begin your meeting, enter the `Zoom` page and select `Start`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-start-meeting.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/zoom-start-meeting.png")`
 Follow the prompt to open the Zoom app.
 If you choose to record your session, you will receive an email when it has been uploaded to the cloud after your session has ended.
 
@@ -166,22 +167,22 @@ If you choose to record your session, you will receive an email when it has been
 
 You may wish to use the `Poll` feature to engage students during your session.
 To add poll questions to your session beforehand, click on the link for the session once it has been created.
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-edit.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/zoom-edit.png")`
 Scroll to the bottom of the screen and select `Download a CSV Template`.
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-poll-csv.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/zoom-poll-csv.png")`
 
 You may use this template to create poll questions for your students. 
 Once you have completed your poll template, select `Import CSV`.
 Your questions are now attached.
 
 During your session, click the `Polling` button to launch your poll.
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-poll.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/zoom-poll.png")`
 
 ## Emoji Feedback
 
 Synchronous sessions can be difficult without seeing students' faces: are they following along?
 You can use the `Reactions` feature to ask students for non-verbal feedback (e.g., "Give me a thumbs up if you've got it!", "Are you ready to move on? Give me a yes/no reaction!")
-`r popups(mylink = "http://ledelaney.org/cb-materials/zoom/input/images/zoom-emoji.png")`
+`r popups(mylink = "https://ledelaney.org/cb-materials/zoom/input/images/zoom-emoji.png")`
 
 ## Chat
 
@@ -204,6 +205,15 @@ My general procedure is to export a `PPT` file as a `PDF` and then use an app li
 This app has several nice features allowing you to control how the students view your PDF, and providing many annotation options (e.g., highlighter, marker, text, and so on).
 The free version of the app has all of these options.
 Annotating a tablet is easiest with a stylus, which you can get online for relatively low-cost.
+
+# Registration
+
+Any meeting you schedule from within your Course Bb page will be visible to anyone enrolled in the course. However, if you wish to schedule a meeting with limited permissions (e.g., a TA meeting) you can require registration so that only the appropriate people may join.
+
+When you set up your meeting, select the option to `Require Registration`. Once you save your meeting, you can customize options about the registration (e.g., if the meeting is recurring you can set it up so participants only register once). Participants will be able to register via by selecting the meeting in on the Zoom Bb page and registering.
+`r popups("https://ledelaney.org/cb-materials/zoom/input/images/zoom-registration.png")`
+
+[See the link here for more information on registration](https://support.zoom.us/hc/en-us/articles/211579443-Setting-up-registration-for-a-meeting#h_01EDCWZHDR8ATR2ZC7ARGV9H3Z){target="_blank"}.
 
 # More Resources
 

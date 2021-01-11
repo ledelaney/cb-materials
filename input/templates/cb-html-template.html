@@ -20,7 +20,7 @@ $endfor$
 <body>
 
 <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-                <a class="navbar-brand" href="http://ledelaney.org/cb-materials">LE 🌺 Delaney | University of Illinois at Chicago &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="navbar-brand" href="https://ledelaney.github.io" target="_blank">LE 🌺 Delaney | University of Illinois at Chicago &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,7 +28,7 @@ $endfor$
                 <div class="collapse navbar-collapse" id="navbarColor03">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="http://ledelaney.org/cb-materials">Home
+                      <a class="nav-link" href="https://ledelaney.org/cb-materials">Home
                         <span class="sr-only">(current)</span>
                       </a>
                     </li>
@@ -36,23 +36,23 @@ $endfor$
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blackboard</a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html">Tests</a>
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html">Assignments and rubrics</a>
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html">Copy and move items</a>
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html">Add users to courses</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html">Tests</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html">Assignments and rubrics</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html">Copy and move items</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html">Add users to courses</a>
                     </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Panopto</a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html">Asynchronous teaching with Panopto</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html">Asynchronous teaching with Panopto</a>
                     </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Zoom</a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="http://ledelaney.org/cb-materials/zoom/BIOS-Zoom-SynchLecture.html">Synchronous teaching with Zoom</a>
+                        <a class="dropdown-item" href="https://ledelaney.org/cb-materials/zoom/BIOS-Zoom-SynchLecture.html">Synchronous teaching with Zoom</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="http://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html">Slack</a>
+                      <a class="nav-link" href="https://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html">Slack</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="https://uic.zoom.us/j/97999924339?pwd=dFlBdHRUNDZSdCtyYXJsSzZWM1g0QT09">Join Drop-in Hours</a>
@@ -71,6 +71,14 @@ $endfor$
 
 
 <div class="mycontainer">
+
+  $if(alert)$
+
+  <div class="alert alert-dismissible alert-info">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>The Latest</strong><br> $alert_message$
+              </div>
+  $endif$
 
   <ul class="nav nav-tabs">
   <li class="nav-item dropdown">
@@ -100,6 +108,12 @@ $endfor$
 <br>
 <br>
 
+<small>
+<p style="border:1px; border-style:solid; border-color:#314737; padding: 1.5em; margin-right: 285px; text-align: left"><code>Raw text</code> &nbsp; = &nbsp; What to click on or type in your computer (can be copy-pasted)<br>
+<a href="">Links</a> &nbsp; = &nbsp; Clickable links</p>
+</small>
+
+
 $body$
 
 
@@ -108,7 +122,7 @@ $body$
           <div class="col-lg-12">
 
             <ul class="list-unstyled">
-              <li><a href="http://ledelaney.org/cb-materials">Home</a></li>
+              <li><a href="https://ledelaney.org/cb-materials">Home</a></li>
               <li><a href="https://github.com/ledelaney/cb-materials" target="_blank">GitHub</a></li>
               $if(pdf_version_bottom)$
               <li>$pdf_version_bottom$</li>
@@ -127,7 +141,7 @@ $body$
 
 
     <script src="../input/dist/jquery.min.js"></script>
-    <script src="../input/dist/bootstrap.bundle.min.js"></script>
-    <script src="../input/dist/custom.js"></script>
+    <script src="../input/dist/bootstrap.bundle.min.js"></script> 
+    <script src="../input/dist/custom.js"></script>  
 </body>
 </html>

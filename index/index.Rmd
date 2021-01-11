@@ -2,8 +2,8 @@
 title: "Course Building Materials"
 subtitle: "UIC BioS"
 author: "L E Delaney"
-version: "Version 2"
-date: January 10, 2020
+version: "Version 3"
+date: January 11, 2020
 output:
   html_document:
     template: "../input/templates/cb-html-template.html"
@@ -13,12 +13,14 @@ output:
 my_toc:
   - {title: "How Can I Help?", link: how-can-i-help}
   - {title: "Drop-in Hours", link: drop-in-hours}
+alert: true
+alert_message: "After a brief outage yesteday 1/10/2021, Blackboard courses are visible again for instructors and students. If you still experience a problem with your courses not being visible to you, please email LTS at `LTS@uic.edu`."
 ---
 
-Find below the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](http://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html){target="_blank"} for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
+Find below the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](https://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html){target="_blank"} for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
 
 _Note: Help me help you by adding me to your Bb course(s) as a TA or Instructor! 
-<a href="http://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html#Add_an_Individual_to_a_Bb_Course" target="_blank">Click here for instructions on how to do this.</a>_
+<a href="https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-AddMe.html#Add_an_Individual_to_a_Bb_Course" target="_blank">Click here for instructions on how to do this.</a>_
 
 ## How can I help?
 

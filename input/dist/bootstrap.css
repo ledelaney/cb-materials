@@ -546,6 +546,15 @@ pre code {
   overflow-y: scroll;
 }
 
+
+.sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: 15px;
+}
+
 .mycontainer{
   margin-right: auto;
   margin-left: auto;
@@ -553,7 +562,7 @@ pre code {
 
 @media (min-width: 576px) {
   .mycontainer {
-    max-width: 560px;
+    max-width: 520px;
     
   }
 }

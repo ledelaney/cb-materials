@@ -74,9 +74,9 @@ smallfont <- function(mytext, output = myoutput){
 }
 
 
-# <a href="http://kanishkkunal.in" 
+# <a href="https://kanishkkunal.in" 
 #   target="popup" 
-#   onclick="window.open('http://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#   onclick="window.open('https://kanishkkunal.in','popup','width=600,height=600'); return false;">
 #     [View Screenshot]
 # </a>
 
