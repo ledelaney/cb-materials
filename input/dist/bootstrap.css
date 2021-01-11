@@ -555,6 +555,13 @@ pre code {
   top: 15px;
 }
 
+.mylegend{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+
 .mycontainer{
   margin-right: auto;
   margin-left: auto;
