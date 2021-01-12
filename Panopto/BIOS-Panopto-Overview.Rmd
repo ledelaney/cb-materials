@@ -3,7 +3,7 @@ title: "Using Panopto for Asynchronous Lectures"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
-date: January 10, 2020
+date: January 12, 2020
 output:
   html_document:
     template: ../input/templates/cb-html-template.html
