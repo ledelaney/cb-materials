@@ -5,17 +5,18 @@ author: "L E Delaney"
 version: "Version 2"
 date: January 12, 2020
 output:
+  pdf_document:
+    latex_engine: xelatex
+    template: ../input/templates/cb-latex-template.tex
+    keep_tex: false
   html_document:
     template: ../input/templates/cb-html-template.html
     css:
       - ../input/dist/custom.min.css
       - ../input/dist/bootstrap.css
-  pdf_document:
-    latex_engine: xelatex
-    template: ../input/templates/cb-latex-template.tex
-    keep_tex: false
 geometry_opts: margin=1in
 documentclass: "article"
+web_link: "\\href{https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-CopyMoveMaterials.html}{click here for web version}"
 my_toc:
   - {title: Copy a Course, link: copy-a-course}
   - {title: Copy a Test or Quiz, link: copy-a-test-or-quiz}
@@ -29,8 +30,8 @@ pdf_version_bottom: '<a href="https://drive.google.com/file/d/1yjwJndAd-seWwwN1h
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-#myoutput <- "latex"
-myoutput <- "html"
+myoutput <- "latex"
+#myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   
