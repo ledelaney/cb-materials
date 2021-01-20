@@ -3,17 +3,17 @@ title: "Blackboard Tests"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 2"
-date: January 12, 2020
+date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    latex_engine: xelatex
-    template: ../input/templates/cb-latex-template.tex
-    keep_tex: false
   html_document:
     template: ../input/templates/cb-html-template.html
     css:
       - ../input/dist/custom.min.css
       - ../input/dist/bootstrap.css
+  pdf_document:
+    latex_engine: xelatex
+    template: ../input/templates/cb-latex-template.tex
+    keep_tex: false
 geometry_opts: margin=1in
 documentclass: "article"
 web_link: "\\href{https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Tests.html}{click here for web version}"
@@ -36,8 +36,8 @@ pdf_version_bottom: '<a href="https://drive.google.com/file/d/1vANwUoU14woFlbLtm
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-myoutput <- "latex"
-#myoutput <- "html"
+#myoutput <- "latex"
+myoutput <- "html"
 
 popups <- function(mylink, output = myoutput){
   

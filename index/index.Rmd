@@ -3,7 +3,7 @@ title: "Course Building Materials"
 subtitle: "UIC BioS"
 author: "L E Delaney"
 version: "Version 3"
-date: January 18, 2020
+date: "`r Sys.Date()`"
 output:
   html_document:
     template: "../input/templates/cb-html-template.html"
@@ -13,8 +13,8 @@ output:
 my_toc:
   - {title: "How Can I Help?", link: how-can-i-help}
   - {title: "Drop-in Hours", link: drop-in-hours}
-alert: true
-alert_message: "January 18th: University holiday MLK Day <br> January 19th: Drop-in hours will end ten minutes early (at 3:50p)"
+alert: false
+alert_message: ""
 ---
 
 Find here the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts, using the navigation bar above. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](https://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html){target="_blank"} for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 

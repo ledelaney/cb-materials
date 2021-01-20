@@ -145,6 +145,16 @@ $endif$
 </div>
 
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<!-- bless you Brian O'Meara -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <script src="../input/dist/jquery.min.js"></script>
 <script src="../input/dist/bootstrap.bundle.min.js"></script> 
