@@ -14,6 +14,7 @@
 ## Panopto for Asynchronous Teaching
 
 + [Brief guide to Panopto in Bb](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html)
++ [Student video assignments using Panopto](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Assignment.html)
 
 ## Slack
 
