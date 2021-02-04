@@ -5,15 +5,15 @@ author: "L E Delaney"
 version: "Version 1"
 date: "`r Sys.Date()`"
 output:
+  pdf_document:
+    latex_engine: xelatex
+    template: ../input/templates/cb-latex-template.tex
+    keep_tex: false
   html_document:
     template: ../input/templates/cb-html-template.html
     css:
       - ../input/dist/custom.min.css
       - ../input/dist/bootstrap.css
-  pdf_document:
-    latex_engine: xelatex
-    template: ../input/templates/cb-latex-template.tex
-    keep_tex: false
 documentclass: "article"
 fontsize: 11pt
 linestretch: 1.1
@@ -115,7 +115,7 @@ html.only <- function(mytext, output = myoutput){
 
 `r latex.only("\\newpage")`
 
-For information on setting up Panopto in Blackboard and general use, see the [Panopto Overview document](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overciew.html){target="_blank"}.
+For information on setting up Panopto in Blackboard and general use, see the [Panopto Overview document](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html).
 
 **Note:** For students to submit videos, the `Panopto Video tool link` must be visible to them on the left-hand menu panel.
 
@@ -124,7 +124,7 @@ For information on setting up Panopto in Blackboard and general use, see the [Pa
 Navigate to the area in Blackboard where you wish to deploy your assignment. On the top menu, hover over `Assessments` and select `Assignment`. 
 `r popups("https://ledelaney.org/cb-materials/panopto/input/images/create-assignment.png")`
 Select the $+$ button from inside the assignment editing page.
-`r popups("https://ledelaney.org/cb-materials/panopto/input/images/add-panopto.png")`
+`r popups("https://ledelaney.org/cb-materials/panopto/input/images/add-panotpo.png")`
 Select `Panopto Student Video Submission`.
 This automatically writes out the steps for your students to submit their videos. The steps are as follows:
 
@@ -135,7 +135,7 @@ This automatically writes out the steps for your students to submit their videos
 + **Step 5**: Select the video you wish to submit and click Insert.
 + **Step 6**: Your video will be added to the submission. Add any extra information and Submit.
 
-Fill out the other details of your assignment as normal. For more information on creating Blackboard assignments, [click here](https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html){target="_blank"}.
+Fill out the other details of your assignment as normal. For more information on creating Blackboard assignments, [click here](https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Assignments.html).
 
 # Grading Panopto Video Assignments in Blackboard
 
@@ -148,7 +148,7 @@ Once inside a student's submission, the video will appear as a clickable link.
 `r popups("https://ledelaney.org/cb-materials/panopto/input/images/student-sub.png")`
 Clicking the link will launch Panopto in a new window, where you may view the student's video.
 To leave feedback and a grade for the student, navigate back to the assignment tab and use the right-hand panel.
-`r popups("https://ledelaney.org/cb-materials/panopto/input/images/feedback-sub.png")`
+`r popups("https://ledelaney.org/cb-materials/panopto/input/images/feedback.png")`
 Click submit.
 
 # Student Submission
@@ -210,7 +210,7 @@ More information on moderating and downloading discussions [can be found here](h
 + [Panopto resources on creating Bb Assignments](https://support.panopto.com/s/article/Assignment-Submission-Workflow-in-Blackboard){target="_blank"}
 + [Panopto resources for students on submitting video assignments](https://support.panopto.com/s/article/How-to-Submit-a-Video-Assignment-in-Blackboard){target="_blank"}
 + [Panopto resources on video discussion](https://support.panopto.com/s/article/How-to-Use-Discussions-in-Videos){target="_blank"}
-+ [Comprehensive Panopto video overview](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overciew.html){target="_blank"}
++ [Comprehensive Panopto video overview](https://ledelaney.org/cb-materials/panopto/BIOS-Panopto-Overview.html){target="_blank"}
 + [Tutorial video for Panopto](https://drive.google.com/file/d/1bUKi5K7-V7cqmFHDtFhVPP-epq0S0b6o/view?usp=sharing){target="_blank"}
 + [ACCC Panopto quick-guide](https://uofi.app.box.com/s/39x6jxlqptj8dum88qqo4c4z4uo9881g){target="_blank"}
 
