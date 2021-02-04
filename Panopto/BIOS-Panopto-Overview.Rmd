@@ -351,6 +351,7 @@ knitr::include_graphics(path = "input/images/availability.png")
 + [Tutorial video for Panopto](https://drive.google.com/file/d/1bUKi5K7-V7cqmFHDtFhVPP-epq0S0b6o/view?usp=sharing){target="_blank"}
 + [Panopto video guides](https://howtovideos.hosted.panopto.com/Panopto/Pages/Folders/DepartmentHome.aspx?folderID=4b9de7ae-0080-4158-8496-a9ba01692c2e){target="_blank"}
 + [ACCC Panopto quick-guide](https://uofi.app.box.com/s/39x6jxlqptj8dum88qqo4c4z4uo9881g){target="_blank"}
++ [Moving Panopto videos between courses](https://elearn.southampton.ac.uk/panopto/settings/moving/){target="_blank"}
 + [UIC video: Getting started in Panopto](https://uic.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=658317eb-2d15-443f-9bf6-aafd0159cd2b){target="_blank"}
 + [UIC video: Video editing in Panopto](https://uic.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=298f9eaa-b385-4afd-aa0e-ab9201453cef){target="_blank"}
 + [ACCC quick-guide for Panopto folder sharing](https://drive.google.com/file/d/1ELZh_MzX23EZSc8_2BUOWM52Cx5bryzD/view?usp=sharing){target="_blank"}
