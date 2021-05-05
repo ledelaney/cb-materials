@@ -230,7 +230,7 @@ The location of the bracketed numbers (e.g., `[1]`) is where a blank box will ap
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
 
-knitr::include_graphics(path = "input/images/multiple-blanks.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/multiple-blanks.png")
 
 ```
 

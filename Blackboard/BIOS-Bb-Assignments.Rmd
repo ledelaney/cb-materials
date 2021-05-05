@@ -157,7 +157,7 @@ Follow this general procedure for creating a rubric:
 
 ```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
-knitr::include_graphics(path = "input/images/criteria.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/criteria.png")
 
 ```
 
@@ -193,9 +193,9 @@ To view your rubric, find the small blue line below the `Attempt` grade box. Cli
 
 ```{r, echo=FALSE, fig.show='hold', out.width="25%", fig.align='center'}
 
-knitr::include_graphics(path = "input/images/1-rubric-grading.png")
-knitr::include_graphics(path = "input/images/2-rubric-grading.png")
-knitr::include_graphics(path = "input/images/3-rubric-grading.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/1-rubric-grading.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/2-rubric-grading.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/3-rubric-grading.png")
 
 ```
 
@@ -214,7 +214,7 @@ Students can go to `My Grades` and click on the assignment. From there, they wil
 
 ```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
-knitr::include_graphics(path = "input/images/student-rubric.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Blackboard/input/images/student-rubric.png")
 
 ```
 

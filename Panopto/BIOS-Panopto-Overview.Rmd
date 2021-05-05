@@ -170,7 +170,7 @@ You will see something like this:
 
 ```{r, echo=FALSE, fig.align='center', out.width="85%"}
 
-knitr::include_graphics(path = "input/images/panopto-record-screen.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Panopto/input/images/panopto-record-screen.png")
 
 ```
 
@@ -205,7 +205,8 @@ When your video is ready in Blackboard, navigate to the `Panopto Content` area a
 
 ```{r, echo=FALSE, fig.align='center', out.width="85%"}
 
-knitr::include_graphics(path = "input/images/panopto-editing.png")
+
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Panopto/input/images/panopto-editing.png")
 
 ```
 
@@ -324,7 +325,7 @@ The second way is to press the diagonal arrow on the bottom right-hand side of t
 
 ```{r, echo=FALSE, fig.align='center', out.width="95%"}
 
-knitr::include_graphics(path = "input/images/panopto-student-view.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Panopto/input/images/panopto-student-view.png")
 
 ```
 
@@ -342,7 +343,7 @@ You can always set availability windows for individual lectures by hovering over
 
 ```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
-knitr::include_graphics(path = "input/images/availability.png")
+knitr::include_graphics(path = "/Users/lucydelaney/Teaching/cb-materials/Panopto/input/images/availability.png")
 
 ```
 
