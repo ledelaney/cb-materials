@@ -14,7 +14,7 @@ my_toc:
   - {title: "How Can I Help?", link: how-can-i-help}
   - {title: "Drop-in Hours", link: drop-in-hours}
 alert: true
-alert_message: "BIOS course building support will pause beginning May 15, and resume from June 15-August 15!"
+alert_message: "Summer session course building has resumed!"
 ---
 
 Find here the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts, using the navigation bar above. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](https://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html) for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
