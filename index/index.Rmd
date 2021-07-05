@@ -1,7 +1,7 @@
 ---
 title: "Course Building Materials"
 subtitle: "UIC BioS"
-author: "L E Delaney"
+author: "Lucy Delaney"
 version: "Version 3"
 date: "`r Sys.Date()`"
 output:

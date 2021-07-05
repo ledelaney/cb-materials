@@ -1,0 +1,157 @@
+---
+title: "Storage for Blackboard Courses"
+subtitle: "UIC BioS"
+author: "Lucy Delaney"
+version: "Version 1"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    template: ../input/templates/cb-latex-template.tex
+    keep_tex: false
+  html_document:
+    template: ../input/templates/cb-html-template.html
+    css:
+      - ../input/dist/custom.min.css
+      - ../input/dist/bootstrap.css
+geometry_opts: "margin=1.3in"
+web_link: "\\href{https://ledelaney.org/cb-materials/blackboard/BIOS-Bb-Storage.html}{click here for web version}"
+my_toc:
+  - {title: Storage in Blackboard, link: storage-in-blackboard}
+  - {title: Reducing Blackboard Storage, link: reducing-blackboard-storage}
+  - {title: Getting More Storage, link: getting-more-storage}
+  - {title: More Resources, link: more-resources}
+pdf_version_top: '<a class="dropdown-item"  href="https://drive.google.com/file/d/1NDdjGRYb-8kUK5U-Q8m2ChQC4ky3AAgK/view?usp=sharing" target="_blank">Download PDF version</a>'
+pdf_version_bottom: '<a href="https://drive.google.com/file/d/1NDdjGRYb-8kUK5U-Q8m2ChQC4ky3AAgK/view?usp=sharing" target="_blank">Download PDF version</a>'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+myoutput <- "latex"
+#myoutput <- "html"
+
+popups <- function(mylink, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\href{", mylink, "}", "{[View Screenshot]}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<a href="', mylink, '"', " ",
+                'target="popup"', " ", 
+                'onclick="', 
+                "window.open('", mylink, "', 'popup','width=600,height=600'); return false;",
+                '">', " ", "[View Screenshot]", "</a>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+smallfont <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\tiny{", mytext, "}") %>%
+      noquote()
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0('<span style = font-size:10px>', mytext, "</span>") %>%
+      noquote()
+    return(b)
+  }
+  
+}
+
+
+# <a href="https://kanishkkunal.in" 
+#   target="popup" 
+#   onclick="window.open('https://kanishkkunal.in','popup','width=600,height=600'); return false;">
+#     [View Screenshot]
+# </a>
+
+#\href{}{}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "latex"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output != "html"){
+    return(NULL)
+    
+  }
+}
+
+```
+
+# Storage in Blackboard
+
+Prior to July 1, 2021, all Blackboard courses possessed unlimited storage -- now, Blackboard storage is limited to 2GB per course. What counts towards your 2GB? In general, any piece of media that you upload to your course: assignment files, syllabus or other course documents, images used in exam questions, etc., and also any media uploaded to the course by students like their assignments. A major exception is that video files uploaded through Panopto will not count toward this limit. 
+
+## Checking your current storage
+
+From within your Blackboard course, navigate to `Course Tools` $\rightarrow$ `Course Storage`. From here, you will have the option to view storage reports for this course or all courses for which you are listed as an instuctor.
+
+# Reducing Blackboard Storage
+
+For large files that cannot be uploaded through Panopto, LTS recommends using cloud storage services. The two primary options through UIC are [Box](https://accc.red.uic.edu/services/communication-collaboration/cloud-storage/box/) and [Google Drive](https://accc.red.uic.edu/services/communication-collaboration/cloud-storage/google-drive/). Once your files are uploaded to cloud storage, you may link them into Blackboard without uploading the file itself.
+
+## Sharable links and access
+
+Once you have uploaded your file to Box or Google drive, you can create sharable links to the file with specific permissions. If you need more information about how to add files to Box or Google Drive, check out the links below under [More Resources](#more-resources).
+
+`r latex.only("\\newpage")`
+
+**In Box:**
+
+1. Hover over the file and press the `Share` button that appears on the right.
+2. Select relevant permissions for the file. ("People in your company" would be anyone with a UIC email address. If you prefer greater restrictions on the file or have a small course, you can add your students' UIC email addresses under `Invite People` and choose to restrict to invited people only.)
+`r popups("https://ledelaney.org/cb-materials/blackboard/input/images/box-permission.png")`
+
+**In Google Drive:**
+
+1. Locate the `Share` button. (In most Google Docs or Sheets it is on the upper right-hand corner of the screen. If you upload a PDF or video file, click on the three vertical dots in the upper right-hand corner and select `Share`.)
+2. You can add individuals by typing in their UIC email addresses, or create a shareable link with specific restrictions (anyone, UIC only, or restricted to invitees).
+
+## Adding cloud storage links to Blackboard
+
+Once you have created the sharable link with the appropriate permissions, you can copy-paste this link and add it to your course in Blackboard. As an example, say you have created an assignment in Blackboard and you wish to link the assignment instructions from Google Drive. Highlight the relevant text and select the "chain" image.
+`r popups("https://ledelaney.org/cb-materials/blackboard/input/images/drive-link.png")`
+A pop-up will open where you can enter the link for the assignment and a relevant title.
+`r popups("https://ledelaney.org/cb-materials/blackboard/input/images/drive-link-edit.png")`
+
+# Getting More Storage
+
+You may request more storage from LTS in 1GB increments by filling out a [Blackboard Course Quote Increase Request](https://help.uillinois.edu/TDClient/37/uic/Requests/ServiceDet?ID=527).
+
+# More Resources
+
++ [LTS article on deleting unused files](https://today.uic.edu/reduce-your-course-storage-size-delete-unused-files){target="_blank"}
++ [Video tutorial on reducing course storage](https://www.youtube.com/watch?v=ypGZ8WE6Xsc){target="_blank"}
++ [Video tutorial on deleting legacy files](https://www.youtube.com/watch?v=FJdoIEUFBnk){target="_blank"}
++ [Video tutorial on linking Google Drive files to Blackboard](https://www.youtube.com/watch?v=9gAeepdTIT4){target="_blank"}
++ [Video tutorial on using Box](https://www.youtube.com/watch?v=-Bu3Vo41vvk){target="_blank"}

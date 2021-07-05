@@ -1,7 +1,7 @@
 ---
 title: "Blackboard Assignments and Rubrics"
 subtitle: "UIC BioS"
-author: "L E Delaney"
+author: "Lucy Delaney"
 version: "Version 2"
 date: "`r Sys.Date()`"
 output:
