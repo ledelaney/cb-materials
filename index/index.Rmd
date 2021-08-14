@@ -14,8 +14,10 @@ my_toc:
   - {title: "How Can I Help?", link: how-can-i-help}
   - {title: "Drop-in Hours", link: drop-in-hours}
 alert: true
-alert_message: "Summer session course building has resumed!"
+alert_message: "This website is no longer being updated as the Course Builder Program has ended. Please contact LTS for support."
 ---
+
+**The Course Builder program has officially ended. Please contact LTS for support!**
 
 Find here the most up-to-date materials created for the UIC Biological Sciences Department online teaching efforts, using the navigation bar above. If you need more assistance, consider joining the BIOS Teaching Slack workspace (see information on [Slack](https://ledelaney.org/cb-materials/slack/BIOS-Slack-Overview.html) for more details), or email me at `ldelan5 at uic dot edu`. My **official working hours are Mon-Fri from 1p-5p**, but I am usually very responsive via email or Slack. 
 
@@ -46,5 +48,4 @@ _Note: You must use your UIC Zoom account to join these sessions._
 **Meeting Details** <br>
 Tuesdays at 3p and Thursdays at 2p <br>
 Meeting ID: `979 9992 4339` <br>
-Passcode: `3P*A2*X&` <br>
-[Meeting Link](https://uic.zoom.us/j/97999924339?pwd=dFlBdHRUNDZSdCtyYXJsSzZWM1g0QT09){target="_blank"}
+Passcode: `3P*A2*X&` 
